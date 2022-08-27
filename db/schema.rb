@@ -19,15 +19,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_065121) do
     t.text "description", null: false
     t.bigint "category_id", null: false
     t.string "image_url", default: "", null: false
-    t.string "video_url", default: "", null: false
+    t.string "video_url"
     t.integer "age_group", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_activities_on_category_id"
+    t.check_constraint "age_group > 0 AND age_group <= 3", name: "age_group_check"
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "type"
+    t.string "type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
