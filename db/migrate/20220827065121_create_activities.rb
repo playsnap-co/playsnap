@@ -5,7 +5,7 @@ class CreateActivities < ActiveRecord::Migration[7.0]
       t.text :description, null: false
       t.references :category, null: false, foreign_key: true
       t.string :image_url, null: false, default: ""
-      t.string :video_url, null: false, default: ""
+      t.string :video_url, null: true, default: ""
       t.integer :age_group, null: false
 
       t.timestamps
