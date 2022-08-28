@@ -1,12 +1,29 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar-playsnp {
+  --bs-bg-opacity: 1;
+  background-color: $white !important;
+  position:absolute;
+  z-index:100;
+  width: 100%;
+  overflow: hidden;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-toggler {
+  border: 0px !important;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-brand img {
   width: 40px;
+}
+
+.nav-item {
+  text-align: right;
+  padding: 14px 16px;
 }
