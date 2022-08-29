@@ -35,4 +35,8 @@ sorting_colours = Activity.new(title:"sorting colours", description: "Ask your t
 sorting_colours.category = gross_motor
 sorting_colours.save!
 
+match_lids = Activity.new(title:"match lids", description: "All you need is a couple of empty plastic bottles and lids. Items required: Bottles", age_group:"2-3", image_url:"https://handsonaswegrow.com/5-fun-learning-activities-bottles-caps/", video_url:"")
+match_lids.category = gross_motor
+match_lids.save!
+
 puts 'Finished!'
