@@ -8,11 +8,11 @@
           <%= f.error_notification %>
 
           <div class="form-inputs">
-            <%# <%= f.input :username,
+            <%= f.input :username,
                         required: true,
                         autofocus: true,
                         input_html: { autocomplete: "username" },
-                        placeholder: "AlexHanson"%>
+                        placeholder: "AlexHanson"
             <%= f.input :email,
                         required: true,
                         autofocus: true,
@@ -35,7 +35,9 @@
           </div>
         <% end %>
 
-        <%= render "devise/shared/links" %>
+          <div class="render text-center margin">
+            <%= render "devise/shared/links" %>
+          </div>
       </div>
     </div>
   </div>
