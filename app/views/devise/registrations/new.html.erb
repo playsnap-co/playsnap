@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12.col-sm-3.col-sm-offset-4">
-      <div class="form-signup">
+      <div class="form-sign-in">
 
-      <h2>Create Account</h2>
+        <h2>Create Account</h2>
+
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
           <%= f.error_notification %>
 
@@ -12,7 +13,7 @@
                         required: true,
                         autofocus: true,
                         input_html: { autocomplete: "username" },
-                        placeholder: "AlexHanson"
+                        placeholder: "AlexHanson"%>
             <%= f.input :email,
                         required: true,
                         autofocus: true,
@@ -27,17 +28,12 @@
                         required: true,
                         input_html: { autocomplete: "new-password" },
                         placeholder: "......" %>
-
           </div>
 
           <div class="form-actions text-center">
             <%= f.button :submit, "Sign up", class:"btn-primary btn-action"%>
           </div>
-        <% end %>
-
-          <div class="render text-center margin">
-            <%= render "devise/shared/links" %>
-          </div>
+          <% end %>
       </div>
     </div>
   </div>
