@@ -1,2 +1,28 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+div class="container">
+  <div class="row">
+    <div class="col-xs-12.col-sm-3.col-sm-offset-4">
+      <div class="form-sign-in">
+
+        <h4>Independent play activities with ANYTHING you have on hand, in a snap!</h4>
+
+        <%# <%= simple_form_for(pages) do |f| %>
+          <%= form_with url: activities_path, method: :get, html: {class:
+                    "mb-4"} do |f| %>
+    <%= f.text_field :query,
+                     class: "form-control",
+                     placeholder: "object" %>
+
+    <%= f.select :age, ["0-12 mths", "12-18 mths", "18-24mths", "24-36mths"] %>
+
+    <%= f.select :age, ["Gross motor", "Fine Physical", "Emotional", "Cognitive"] %>
+
+             <div class="form-actions text-center">
+            <%= f.submit "Search", class:"btn-primary btn-action"%>
+          </div>
+            <% end %>
+
+
+      </div>
+    </div>
+  </div>
+</div>
