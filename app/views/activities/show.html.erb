@@ -1,1 +1,9 @@
-<h1>Show Activity</h1>
+<% content_for :title do %>
+  Explore
+<% end %>
+
+<%= image_tag(@activity.image_url, class:"w-100") %>
+<span class="badge rounded-pill bg-info text-dark"><%= @activity.age_group %> months</span>
+<span class="badge rounded-pill bg-info text-dark">Physical</span>
+<%= @activity.title %>
+<%= @activity.description %>
