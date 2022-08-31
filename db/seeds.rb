@@ -5,8 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Child.delete_all
+User.delete_all
 Activity.delete_all
 Category.delete_all
+
+puts "Creating Users"
+["goh", "kyla", "yaamani", "jielin"].each do |user|
+  User.create(username: user, email: "#{user}@playsnap.com", password: 123456)
+end
+
+puts "Creating Children"
+["danielle", "whysee", "easun", "annie"].each_with_index do |user, index|
+  Child.create(name: user, age: index, gender: ["male", "female"].sample, user_id: index + 1)
+end
+
 
 puts 'Creating Categories...'
 social = Category.new(sort: "social")
