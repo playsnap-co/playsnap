@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_27_065121) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_31_102959) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,37 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_065121) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "child_activities", force: :cascade do |t|
+    t.bigint "child_id", null: false
+    t.bigint "activity_id", null: false
+    t.boolean "completed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_child_activities_on_activity_id"
+    t.index ["child_id"], name: "index_child_activities_on_child_id"
+  end
+
+  create_table "children", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name", default: "", null: false
+    t.integer "age", default: 0, null: false
+    t.string "gender", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_children_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "activity_id", null: false
+    t.integer "rating", null: false
+    t.text "content", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_reviews_on_activity_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,7 +75,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_065121) do
     t.string "username", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "wishlists", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "activity_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_wishlists_on_activity_id"
+    t.index ["user_id"], name: "index_wishlists_on_user_id"
   end
 
   add_foreign_key "activities", "categories"
+  add_foreign_key "child_activities", "activities"
+  add_foreign_key "child_activities", "children"
+  add_foreign_key "children", "users"
+  add_foreign_key "reviews", "activities"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "wishlists", "activities"
+  add_foreign_key "wishlists", "users"
 end
