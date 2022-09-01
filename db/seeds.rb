@@ -51,7 +51,6 @@ match_lids = Activity.new(title:"match lids", description: "All you need is a co
 match_lids.category = gross_motor
 match_lids.save!
 
-<<<<<<< HEAD
 wheat_drawing = Activity.new(title:"wheat drawing", description: "Little artists can express themselves by drawing on a layer of cream of wheat on a tray.  Items required: Wheat", age_group:"1-2", image_url:"https://handsonaswegrow.com/flour-sensory-play-toddlers/", video_url:"")
 wheat_drawing.category = physical
 wheat_drawing.save!
