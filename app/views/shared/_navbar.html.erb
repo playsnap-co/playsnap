@@ -1,7 +1,7 @@
 <div class="navbar navbar-playsnap" aria-label="playsnap navbar">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag("playsnap_logo.png", style: "width: 100px") %>
+      <%= yield :title %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,22 +11,32 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+          <li class="nav-item">
+            <%= link_to "#", class: "nav-link fa fa-cog" do %>
+              <span id="text">Settings</span>
+            <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "#", class: "nav-link fa fa-credit-card" do %>
+              <span id="text">Subscription</span>
+            <% end %>
           </li>
-          <li class="nav-item dropdown">
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
+          <li class="nav-item ">
+            <%= link_to about_playsnap_path, class: "nav-link fa fa-info-circle" do %>
+              <span id="text">About Playsnap</span>
+            <% end %>
+          </li>
+          <li class="nav-item ">
+            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
           </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item ">
+            <%= link_to about_playsnap_path, class: "nav-link fa fa-info-circle" do %>
+              <span id="text">About Playsnap</span>
+            <% end %>
           </li>
         <% end %>
       </ul>
