@@ -183,7 +183,7 @@ stack.save!
 texture_exploring = Activity.new(title:"texture_exploring", description: "let toddler explore the different textures.  Items required: any interesting texture", age_group:"1-2", image_url: "https://1.bp.blogspot.com/-pDKCKBeSz-A/XzZ6Qt7hVoI/AAAAAAAAcM8/EM87qxUOvYUpcM2fH7KdxjRTETFelNL_gCLcBGAsYHQ/s2048/IMG_4278.jpg", video_url:"")
 texture_exploring.category = cognitive
 texture_exploring.save!
-=======
+
 puts "Creating physical activities"
 Activity.create(
   [
@@ -275,6 +275,5 @@ Activity.create(
     }
   ]
 )
->>>>>>> dd92682 (Add more physical activities)
 
 puts 'Finished!'
