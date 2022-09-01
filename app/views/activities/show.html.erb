@@ -1,1 +1,23 @@
-<h1>Show Activity</h1>
+<div class="activity">
+  <%= image_tag(@activity.image_url, class:"w-100 activity-image") %>
+  <div class="container">
+    <div class="mt-2">
+      <span class="badge rounded-pill bg-info text-dark"><%= @activity.age_group * 12 %> months</span>
+      <span class="badge rounded-pill bg-info text-dark"><%= @activity.category.sort.titleize %></span>
+    </div>
+    <div class="mt-2 d-flex justify-content-between activity-title">
+      <span><%= @activity.title %></span>
+      <div class="d-flex">
+        <span><%= button_to "", "#", class:"border-0 fa-regular fa-heart bg-transparent" %></span>
+        <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
+        <span><%= button_to "", "#", class:"border-0 fa-regular fa-bookmark bg-transparent" %></span>
+      </div>
+    </div>
+    <div class="mt-2">
+      Rating: <%= @activity.average_rating %>
+    </div>
+    <div class="mt-2">
+      <%= @activity.description %>
+    </div>
+  </div>
+</div>
