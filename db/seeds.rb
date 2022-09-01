@@ -20,7 +20,6 @@ puts "Creating Children"
   Child.create(name: user, age: index, gender: ["male", "female"].sample, user_id: index + 1)
 end
 
-
 puts 'Creating Categories...'
 social = Category.new(sort: "social")
 social.save!
@@ -52,6 +51,7 @@ match_lids = Activity.new(title:"match lids", description: "All you need is a co
 match_lids.category = gross_motor
 match_lids.save!
 
+<<<<<<< HEAD
 wheat_drawing = Activity.new(title:"wheat drawing", description: "Little artists can express themselves by drawing on a layer of cream of wheat on a tray.  Items required: Wheat", age_group:"1-2", image_url:"https://handsonaswegrow.com/flour-sensory-play-toddlers/", video_url:"")
 wheat_drawing.category = physical
 wheat_drawing.save!
@@ -183,5 +183,98 @@ stack.save!
 texture_exploring = Activity.new(title:"texture_exploring", description: "let toddler explore the different textures.  Items required: any interesting texture", age_group:"1-2", image_url: "https://1.bp.blogspot.com/-pDKCKBeSz-A/XzZ6Qt7hVoI/AAAAAAAAcM8/EM87qxUOvYUpcM2fH7KdxjRTETFelNL_gCLcBGAsYHQ/s2048/IMG_4278.jpg", video_url:"")
 texture_exploring.category = cognitive
 texture_exploring.save!
+=======
+puts "Creating physical activities"
+Activity.create(
+  [
+    {
+      title: "Row, Row, Row Your Boat",
+      description: "This indoor physical activity is great for toddlers'
+      physical development and socialization with no equipment necessary.
+      In this exercise, children sit facing a partner with feet touching.
+      They hold hands and lean forward and backward while singing the classic song",
+      age_group: 1,
+      image_url: "https://theinspiredtreehouse.com/wp-content/uploads/2014/01/fun-sensory-activities-row-your-boat-square.jpg",
+      video_url: "",
+      category: physical
+    },
+    {
+      title: "Musical Hide and Seek",
+      description: "Play music from a phone and hide it from the children. You and the children can then search together to figure out where the music is coming from.
+      This activity will be fun for the toddlers and will get them moving.",
+      age_group: 1,
+      image_url: "https://i.dailymail.co.uk/i/pix/2016/11/18/18/3A86BC9100000578-0-image-a-4_1479493399222.jpg",
+      video_url: "",
+      category: physical
+    },
+    {
+      title: "Build a Tower",
+      description: "Need a supply of blocks, containers with lids or another similar, stackable object.
+      Using your item of choice, build a tower with a child.
+      Take turns adding blocks or containers to the tower and see how high the child can stack them.
+      You can count the number of stacked items together, and then when the tower is complete, the child can knock it down.",
+      age_group: 3,
+      image_url: "https://www.howwemontessori.com/.a/6a0147e1d4f40f970b017743f34f16970d-pi",
+      video_url: "",
+      category: physical
+    },
+    {
+      title: "Toss Balls in a Basket",
+      description: "Give toddlers foam or rubber balls to roll back and forth to a partner.
+      Older toddlers can toss the balls into a basket.
+      During this activity, exercise caution with younger children who might bite foam balls.
+      Avoid small balls that toddlers could put in their mouths and swallow.",
+      age_group: 2,
+      image_url: "https://i.shgcdn.com/a75502b6-303a-457d-a3aa-748cb16dd231/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      video_url: "",
+      category: physical
+    },
+    {
+      title: "Throw Sponges",
+      description: "This activity is great for a hot day.
+      Children take wet sponges and toss them toward a container or bin.
+      They can compare how far they can throw sponges of different sizes can be
+      thrown or how different amounts of water affect the distance the sponge travels.",
+      age_group: 3,
+      image_url: "https://playtivities.com/wp-content/uploads/2021/05/13-sponge-toss.jpg.webp",
+      video_url: "",
+      category: physical
+    },
+    {
+      title: "Imitate Animals",
+      description: "While on their hands and knees, toddlers move, stretch and play like animals.
+      They can hop like a frog or waddle like a penguin.
+      They can arch their backs, roll on their backs, reach as high as they can and walk on all fours.
+      Choose a variety of animals and movements to keep children engaged and using their whole bodies to stay active.",
+      age_group: 2,
+      image_url: "https://lemonlimeadventures.com/wp-content/uploads/2015/01/Animal-Walk-Exercises.jpg",
+      video_url: "",
+      category: physical
+    },
+    {
+      title: "Hit the Balloon",
+      description: "Encourage toddlers to keep a balloon from touching the ground by hitting it with their hands.
+      You can also place an item between two children, such as a chair or pillow,
+      and instruct them to hit the balloon over the barrier to the other child.
+      Chasing balloons allows children to run,
+      zigzag and hop to keep up with the object while maintaining their balance.",
+      age_group: 3,
+      image_url: "https://www.hellowonderful.co/wp-content/uploads/2020/03/balloon-tennis-game-kids.jpg.webp",
+      video_url: "",
+      category: physical
+    },
+    {
+      title: "Feed the Lion",
+      description: "On a cardboard box, draw or paint a lion's head and cut a hole for the lion's mouth.
+      Children will take crumpled paper balls and try to toss them into the lion's mouth.
+      Afterward, children can count how many balls they fed the lion.",
+      age_group: 3,
+      image_url: "https://rainydaymum.co.uk/wp-content/uploads/2018/04/feed-the-lion-counting-game-for-toddlers-and-preschoolers-feature.jpg",
+      video_url: "",
+      category: physical
+    }
+  ]
+)
+>>>>>>> dd92682 (Add more physical activities)
 
 puts 'Finished!'
