@@ -11,7 +11,6 @@
 @import "components/index";
 @import "pages/index";
 
-.all {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+body {
+  background: linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,.95)), url("whatsapp.jpeg");
 }
