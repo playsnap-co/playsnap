@@ -17,6 +17,7 @@
 
 .navbar-collapse {
   flex-grow: 0;
+  background: $teal;
 }
 
 .navbar-brand img {
@@ -24,6 +25,18 @@
 }
 
 .nav-item {
-  text-align: right;
+  text-align: left;
   padding: 14px 16px;
+  a {
+    color: $white;
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(124,201,215, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.fa #text {
+  font-family: $body-font;
+  font-weight: var(--fa-style, 400);
 }
