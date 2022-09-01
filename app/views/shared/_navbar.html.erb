@@ -1,7 +1,7 @@
 <div class="navbar navbar-playsnap" aria-label="playsnap navbar">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag("playsnap_logo.png", style: "width: 100px") %>
+      <%= yield :title %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
