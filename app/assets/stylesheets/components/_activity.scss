@@ -1,0 +1,19 @@
+.activity {
+  &-image{
+    margin-top: 64px;
+  }
+
+  .row {
+    --bs-gutter-x: 0;
+  }
+
+  &-title{
+    font-size: 24px;
+  }
+
+  button {
+    // margin-right: 30px;
+    color: $dark-gray;
+  }
+
+}
