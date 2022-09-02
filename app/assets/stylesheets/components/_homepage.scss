@@ -1,6 +1,6 @@
 .homepage{
   padding: 20px 40px 20px 40px;
-  margin-top: 40px;
+  margin-top: 80px;
   font-size: x-large;
 }
 
@@ -10,4 +10,10 @@
 
 .form-control {
   border-radius: 20px;
+  background-color: $light-blue;
+}
+
+.form-select {
+  background-color: $light-blue;
+  color: $pale-gray;
 }
