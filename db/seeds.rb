@@ -47,35 +47,35 @@ sorting_colours = Activity.new(title:"Sorting Colours", description: "Ask your t
 sorting_colours.category = gross_motor
 sorting_colours.save!
 
-match_lids = Activity.new(title:"Match Lids", description: "All you need is a couple of empty plastic bottles and lids. Items required: Bottles", age_group:"2-3", image_url:"https://handsonaswegrow.com/5-fun-learning-activities-bottles-caps/", video_url:"")
+match_lids = Activity.new(title:"Match Lids", description: "All you need is a couple of empty plastic bottles and lids. Items required: Bottles", age_group:"2-3", image_url:"https://cdn.handsonaswegrow.com/wp-content/uploads/2016/04/Sequence.jpg", video_url:"")
 match_lids.category = gross_motor
 match_lids.save!
 
-wheat_drawing = Activity.new(title:"Wheat Drawing", description: "Little artists can express themselves by drawing on a layer of cream of wheat on a tray.  Items required: Wheat", age_group:"1-2", image_url:"https://handsonaswegrow.com/flour-sensory-play-toddlers/", video_url:"")
+wheat_drawing = Activity.new(title:"Wheat Drawing", description: "Little artists can express themselves by drawing on a layer of cream of wheat on a tray.  Items required: Wheat", age_group:"1-2", image_url:"https://i.ytimg.com/vi/qXXB72t7kCc/maxresdefault.jpg", video_url:"")
 wheat_drawing.category = physical
 wheat_drawing.save!
 
-sieve_pasta = Activity.new(title:"Sieve Pasta", description: "Put some dried pasta (all one shape or a mix of different shapes) into a big plastic bowl. Hand your child a plastic jug or spoon and a sieve for lots of scooping, collecting, sorting and pouring. Items required: Bowl, Pasta", age_group:"2-3", image_url:"https://www.messylittlemonster.com/2016/05/pasta-play-simple-activities-for.html", video_url:"")
+sieve_pasta = Activity.new(title:"Sieve Pasta", description: "Put some dried pasta (all one shape or a mix of different shapes) into a big plastic bowl. Hand your child a plastic jug or spoon and a sieve for lots of scooping, collecting, sorting and pouring. Items required: Bowl, Pasta", age_group:"2-3", image_url:"https://4.bp.blogspot.com/-g7lbb-xl3Rw/Vz28Y-PfB3I/AAAAAAAAFz0/zjOjpdE4doAWXDX8nfiA_s__WF_eREGIQCKgB/s1600/threading%2Bpasta%2B.png", video_url:"")
 sieve_pasta.category = physical
 sieve_pasta.save!
 
-sweep_dust = Activity.new(title:"Sweep Dust", description: "Get them a mini broom or dustpan and brush – or even one of the little play vacuum cleaners that make brilliant, important-sounding suction noises – and spend some time making the floor all spick and span. Items required: Duster", age_group:"2-3", image_url:"https://www.educatall.com/page/1156/Tiny-brooms-and-dustpans-for-toddlers.html", video_url:"")
+sweep_dust = Activity.new(title:"Sweep Dust", description: "Get them a mini broom or dustpan and brush – or even one of the little play vacuum cleaners that make brilliant, important-sounding suction noises – and spend some time making the floor all spick and span. Items required: Duster", age_group:"2-3", image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVO2pmNE9cUGvyXBUuE_ZXS5gke-sKWNTcJA&usqp=CAU", video_url:"")
 sweep_dust.category = physical
 sweep_dust.save!
 
-imagine_a_boat = Activity.new(title:"Imagine a Boat", description: "Lay out a towel or blanket on the floor and have your toddler sit it, gently pull them around the room. Pretend the blanket is a train or a boat and that you are stopping at different places, like the zoo, the grocery store, or a favorite restaurant. This activity for 2-year-olds at home will also improve balance! Items required: Towel", age_group:"2-3", image_url:"https://www.freepik.com/premium-photo/happy-baby-sitting-yellow-background-wrapped-blue-towel-with-hood-baby-after-bath_16480283.html", video_url:"")
+imagine_a_boat = Activity.new(title:"Imagine a Boat", description: "Lay out a towel or blanket on the floor and have your toddler sit it, gently pull them around the room. Pretend the blanket is a train or a boat and that you are stopping at different places, like the zoo, the grocery store, or a favorite restaurant. This activity for 2-year-olds at home will also improve balance! Items required: Towel", age_group:"2-3", image_url:"https://3.bp.blogspot.com/-hC0NM37SVFU/V8bHRi6XZjI/AAAAAAAAX5A/yv2J-S929TQUPWQrRLzoN7zfMQYtHb0FwCLcB/s640/IMG_3259.JPG", video_url:"")
 imagine_a_boat.category = gross_motor
 imagine_a_boat.save!
 
-hide_toys = Activity.new(title:"Hide Toys", description: "For an easy indoor activity for 2-year-olds, hide a toy somewhere in the house, and ask your child to find it. Explore with them, using cues like warmer and colder to guide them. You can also use flashlights for the search or hide several objects at one time. Items required: Toys", age_group:"2-3", image_url:"https://bestlifeonline.com/hiding-childrens-toys/", video_url:"")
+hide_toys = Activity.new(title:"Hide Toys", description: "For an easy indoor activity for 2-year-olds, hide a toy somewhere in the house, and ask your child to find it. Explore with them, using cues like warmer and colder to guide them. You can also use flashlights for the search or hide several objects at one time. Items required: Toys", age_group:"2-3", image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmM1r4yoiBSrIM3dffw3ZMED054peYBUgwoDVLcOR9jq9drNuwGqdOYbm8_PLUx9jwzcA&usqp=CAU", video_url:"")
 hide_toys.category = physical
 hide_toys.save!
 
-knock_off = Activity.new(title:"Knock Off", description: "Put a small ball on top of a paper cup. Practice only kicking the ball off the cup without knocking the cup over. Items required: Ping Pong balls, Cup", age_group:"2-3", image_url:"https://happymomhacks.com/indoor-activities-kids-at-home/", video_url:"")
+knock_off = Activity.new(title:"Knock Off", description: "Put a small ball on top of a paper cup. Practice only kicking the ball off the cup without knocking the cup over. Items required: Ping Pong balls, Cup", age_group:"2-3", image_url:"https://www.ordinaryreviews.com/wp-content/uploads/2019/07/ball-and-cup-carnival-games-800x451.jpg", video_url:"")
 knock_off.category = physical
 knock_off.save!
 
-tug_of_war = Activity.new(title:"Tug of War", description: "Play tug of war with a towel. Try playing in tall kneeling. Items required: Towel", age_group:"2-3", image_url:"https://xframe.io/photos/102817", video_url:"")
+tug_of_war = Activity.new(title:"Tug of War", description: "Play tug of war with a towel. Try playing in tall kneeling. Items required: Towel", age_group:"2-3", image_url:"https://t7.xframe.io/000/102/817/102817.jpg?auto=format&fit=crop&w=800&q=80&ixlib=react-9.4.0", video_url:"")
 tug_of_war.category = gross_motor
 tug_of_war.save!
 
@@ -115,71 +115,71 @@ laundry_basket_push  = Activity.new(title:"Laundry Basket push", description: "L
 laundry_basket_push.category = gross_motor
 laundry_basket_push.save!
 
-walking_on_a_balance_beam  = Activity.new(title:"walking on a balance beam", description: "Using tape, create a tape balance beam on the floor for your child to walk along.  Items required: tape", age_group:"2-3", image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqD26kKs0y8TjNDQ0de0e5e2PgxQdKRPZN9w&usqp=CAU", video_url:"")
+walking_on_a_balance_beam  = Activity.new(title:"Walking on a Balance Beam", description: "Using tape, create a tape balance beam on the floor for your child to walk along.  Items required: tape", age_group:"2-3", image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqD26kKs0y8TjNDQ0de0e5e2PgxQdKRPZN9w&usqp=CAU", video_url:"")
 walking_on_a_balance_beam.category = gross_motor
 walking_on_a_balance_beam.save!
 
-the_ball_waddle  = Activity.new(title:"the ball waddle", description: "Place a ball between your child knees and get them to waddle across the room without dropping it. Items required: ball", age_group:"2-3", image_url:"https://www.yourkidsot.com/uploads/2/4/0/3/24030117/2_1_orig.png", video_url:"")
+the_ball_waddle  = Activity.new(title:"The Ball Waddle", description: "Place a ball between your child knees and get them to waddle across the room without dropping it. Items required: ball", age_group:"2-3", image_url:"https://www.yourkidsot.com/uploads/2/4/0/3/24030117/2_1_orig.png", video_url:"")
 the_ball_waddle.category = gross_motor
 the_ball_waddle.save!
 
-green_orange_red_light  = Activity.new(title:"green orange red light", description: "This is such a simple gross motor activity that always goes down well with toddlers. Get your child driving around in a pretend car. When you say green light, they must move around really quickly, orange light, they go slowly and red light they have to stop and standstill. Items required: none", age_group:"2-3", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7LjoTO70SVAaf1KavGbKS91Pl4qgV5bHcQ&usqp=CAU", video_url:"")
+green_orange_red_light  = Activity.new(title:"Green Orange Red Light", description: "This is such a simple gross motor activity that always goes down well with toddlers. Get your child driving around in a pretend car. When you say green light, they must move around really quickly, orange light, they go slowly and red light they have to stop and standstill. Items required: none", age_group:"2-3", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7LjoTO70SVAaf1KavGbKS91Pl4qgV5bHcQ&usqp=CAU", video_url:"")
 green_orange_red_light.category = gross_motor
 green_orange_red_light.save!
 
-mini_soccer  = Activity.new(title:"mini soccer", description: "Tip an empty laundry basket or cardboard box on its side for a goal. Then let your kids kick the balloon into the goal. Record how many goals they can make in the X amount of time. Items required: ball, basket", age_group:"2-3", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuPHK8KxNt5wem7CicGTZGpgGzmImRFfP4w&usqp=CAU", video_url:"")
+mini_soccer  = Activity.new(title:"Mini Soccer", description: "Tip an empty laundry basket or cardboard box on its side for a goal. Then let your kids kick the balloon into the goal. Record how many goals they can make in the X amount of time. Items required: ball, basket", age_group:"2-3", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuPHK8KxNt5wem7CicGTZGpgGzmImRFfP4w&usqp=CAU", video_url:"")
 mini_soccer.category = gross_motor
 mini_soccer.save!
 
-balancing_act  = Activity.new(title:"balancing act", description: "Use a stopwatch and record how long your child can balance on one foot. With each repetition, the goal is to beat their time. Switch legs. Items required: none", age_group:"2-3", image_url: "https://theinspiredtreehouse.com/wp-content/uploads/2017/04/single-leg-stance-twitter.png", video_url:"")
+balancing_act  = Activity.new(title:"Balancing Act", description: "Use a stopwatch and record how long your child can balance on one foot. With each repetition, the goal is to beat their time. Switch legs. Items required: none", age_group:"2-3", image_url: "https://theinspiredtreehouse.com/wp-content/uploads/2017/04/single-leg-stance-twitter.png", video_url:"")
 balancing_act.category = gross_motor
 balancing_act.save!
 
-egg_spoon_race = Activity.new(title:"egg & spoon race", description: "In this version, balance a ball on a spoon. Either set up a straight race where everyone races at once to the finish line. Or complete an alternating relay. Items required: ping pong ball, spoon", age_group:"2-3", image_url: "https://www.beafunmum.com/wp-content/uploads/2015/03/BigW-Easter_092.jpg", video_url:"")
+egg_spoon_race = Activity.new(title:"Egg & Spoon Race", description: "In this version, balance a ball on a spoon. Either set up a straight race where everyone races at once to the finish line. Or complete an alternating relay. Items required: ping pong ball, spoon", age_group:"2-3", image_url: "https://www.beafunmum.com/wp-content/uploads/2015/03/BigW-Easter_092.jpg", video_url:"")
 egg_spoon_race.category = physical
 egg_spoon_race.save!
 
-pillow_stacking = Activity.new(title:"pillow stacking", description: "A fun pillow stacking activity to encourage gross motor skills and science skills that is so much fun, too. Lets learn some physics! Items required: pillow", age_group:"2-3", image_url: "https://kidsactivitiesblog--o--com.follycdn.com/wp-content/uploads/2012/06/pillow-stacks.jpg", video_url:"")
+pillow_stacking = Activity.new(title:"Pillow Stacking", description: "A fun pillow stacking activity to encourage gross motor skills and science skills that is so much fun, too. Lets learn some physics! Items required: pillow", age_group:"2-3", image_url: "https://kidsactivitiesblog--o--com.follycdn.com/wp-content/uploads/2012/06/pillow-stacks.jpg", video_url:"")
 pillow_stacking.category = gross_motor
 pillow_stacking.save!
 
-foil_up = Activity.new(title:"foil up", description: "Learn about Texture by Molding and Painting Aluminum Foil Play with aluminum foil is a great way to learn about our sense of touch, texture and spatial reasoning as kids can ball the foil up into shapes, cover items and make imprints of them. Items required: foil", age_group:"2-3", image_url: "https://rukminim1.flixcart.com/image/800/800/k1118cw0/foil-shrinkwrap/n/z/q/9-af9m-supreme-bazaar-original-imafjz887cmsumfh.jpeg?q=90", video_url:"")
+foil_up = Activity.new(title:"Foil Up", description: "Learn about Texture by Molding and Painting Aluminum Foil Play with aluminum foil is a great way to learn about our sense of touch, texture and spatial reasoning as kids can ball the foil up into shapes, cover items and make imprints of them. Items required: foil", age_group:"2-3", image_url: "https://rukminim1.flixcart.com/image/800/800/k1118cw0/foil-shrinkwrap/n/z/q/9-af9m-supreme-bazaar-original-imafjz887cmsumfh.jpeg?q=90", video_url:"")
 foil_up.category = physical
 foil_up.save!
 
-stacking_cups = Activity.new(title:"stacking cups", description: "Stacking Cups for Gross Motor Play Two year olds have fun rolling stacking cups, and pretending to drink/eat. Items required: cups", age_group:"2-3", image_url: "https://cdn.handsonaswegrow.com/wp-content/uploads/2012/05/2012_05_092.jpg", video_url:"")
+stacking_cups = Activity.new(title:"Stacking Cups", description: "Stacking Cups for Gross Motor Play Two year olds have fun rolling stacking cups, and pretending to drink/eat. Items required: cups", age_group:"2-3", image_url: "https://cdn.handsonaswegrow.com/wp-content/uploads/2012/05/2012_05_092.jpg", video_url:"")
 stacking_cups.category = gross_motor
 stacking_cups.save!
 
-bucket_transfer = Activity.new(title:"bucket transfer", description: "Take two bowls and place one at one end of the room and one somewhere farther away.How fast can you transfer all of the balls to the empty bucket? Items required: ball, basket", age_group:"2-3", image_url: "https://cdn.handsonaswegrow.com/wp-content/uploads/2017/07/IMG_0460_edited1-433x650.jpg", video_url:"")
+bucket_transfer = Activity.new(title:"Bucket Transfer", description: "Take two bowls and place one at one end of the room and one somewhere farther away.How fast can you transfer all of the balls to the empty bucket? Items required: ball, basket", age_group:"2-3", image_url: "https://cdn.handsonaswegrow.com/wp-content/uploads/2017/07/IMG_0460_edited1-433x650.jpg", video_url:"")
 bucket_transfer.category = physical
 bucket_transfer.save!
 
-learn_letters_with_flashcards  = Activity.new(title:"learn letters with flashcards", description: "Alphabets: run through A - Z, can throw in phonics and an item to associate with the letterbonus: A! Ah ah ah, Apple! A A.  Items required: flashcards", age_group:"1-2", image_url: "https://images-na.ssl-images-amazon.com/images/I/61NTjFBhKbS.__AC_SX300_SY300_QL70_ML2_.jpg", video_url:"")
+learn_letters_with_flashcards  = Activity.new(title:"Learn Letters With Flashcards", description: "Alphabets: run through A - Z, can throw in phonics and an item to associate with the letterbonus: A! Ah ah ah, Apple! A A.  Items required: flashcards", age_group:"1-2", image_url: "https://images-na.ssl-images-amazon.com/images/I/61NTjFBhKbS.__AC_SX300_SY300_QL70_ML2_.jpg", video_url:"")
 learn_letters_with_flashcards.category = cognitive
 learn_letters_with_flashcards.save!
 
-sing_along  = Activity.new(title:"sing along", description: "Anything that pops in your mind! Hint: Twinkle twinkle little star! cocomelon if you need extra help. Items required: none", age_group:"1-2", image_url: "http://www.readingbrightstart.org/wp-content/uploads/2015/03/animal-singalong.jpg", video_url:"")
+sing_along  = Activity.new(title:"Sing Along", description: "Anything that pops in your mind! Hint: Twinkle twinkle little star! cocomelon if you need extra help. Items required: none", age_group:"1-2", image_url: "http://www.readingbrightstart.org/wp-content/uploads/2015/03/animal-singalong.jpg", video_url:"")
 sing_along.category = cognitive
 sing_along.save!
 
-guess_the_animal  = Activity.new(title:"guess the animal", description: "Make some animal sounds and ask the toddler what animal it is. Items required: none", age_group:"1-2", image_url: "https://play-lh.googleusercontent.com/MWG4adp0FnC_otvGjVeyPYs2FiqaaE-z-obZH4Zp0BAzC4bREeDAk_kf0oirzjA8FRo", video_url:"")
+guess_the_animal  = Activity.new(title:"Guess The Animal", description: "Make some animal sounds and ask the toddler what animal it is. Items required: none", age_group:"1-2", image_url: "https://play-lh.googleusercontent.com/MWG4adp0FnC_otvGjVeyPYs2FiqaaE-z-obZH4Zp0BAzC4bREeDAk_kf0oirzjA8FRo", video_url:"")
 guess_the_animal.category = cognitive
 guess_the_animal.save!
 
-simple_puzzle  = Activity.new(title:"simple puzzle", description: "Get your toddler a two-piece puzzle that is easy to identify visually and enables your little one to use their memory and logic to complete them. Items required: puzzle", age_group:"2-3", image_url: "https://m.media-amazon.com/images/I/61hQL6OD5aL._AC_SX679_.jpg", video_url:"")
+simple_puzzle  = Activity.new(title:"Simple Puzzle", description: "Get your toddler a two-piece puzzle that is easy to identify visually and enables your little one to use their memory and logic to complete them. Items required: puzzle", age_group:"2-3", image_url: "https://m.media-amazon.com/images/I/61hQL6OD5aL._AC_SX679_.jpg", video_url:"")
 simple_puzzle.category = cognitive
 simple_puzzle.save!
 
-learn_colours  = Activity.new(title:"learn colours", description: "Point to the item and say the colour and what it is.  Items required: none", age_group:"1-2", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6CkSwE2rMT52IwE3LwYA3lr8gySlFkqBog&usqp=CAU", video_url:"")
+learn_colours  = Activity.new(title:"Learn Colours", description: "Point to the item and say the colour and what it is.  Items required: none", age_group:"1-2", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6CkSwE2rMT52IwE3LwYA3lr8gySlFkqBog&usqp=CAU", video_url:"")
 learn_colours.category = cognitive
 learn_colours.save!
 
-stack = Activity.new(title:"stack", description: "Free play to stack building blocks.  Items required: wooden blocks", age_group:"1-2", image_url: "https://media.istockphoto.com/photos/six-wooden-blocks-arranged-in-pyramid-shape-picture-id1269203354?k=20&m=1269203354&s=612x612&w=0&h=Cgjq7c0RRnGvIdCrWzE-vQ3N0-lc4ngM6YAJlRADb4Y=", video_url:"")
+stack = Activity.new(title:"Stack", description: "Free play to stack building blocks.  Items required: wooden blocks", age_group:"1-2", image_url: "https://media.istockphoto.com/photos/six-wooden-blocks-arranged-in-pyramid-shape-picture-id1269203354?k=20&m=1269203354&s=612x612&w=0&h=Cgjq7c0RRnGvIdCrWzE-vQ3N0-lc4ngM6YAJlRADb4Y=", video_url:"")
 stack.category = cognitive
 stack.save!
 
-texture_exploring = Activity.new(title:"texture_exploring", description: "let toddler explore the different textures.  Items required: any interesting texture", age_group:"1-2", image_url: "https://1.bp.blogspot.com/-pDKCKBeSz-A/XzZ6Qt7hVoI/AAAAAAAAcM8/EM87qxUOvYUpcM2fH7KdxjRTETFelNL_gCLcBGAsYHQ/s2048/IMG_4278.jpg", video_url:"")
+texture_exploring = Activity.new(title:"Texture Exploring", description: "let toddler explore the different textures.  Items required: any interesting texture", age_group:"1-2", image_url: "https://1.bp.blogspot.com/-pDKCKBeSz-A/XzZ6Qt7hVoI/AAAAAAAAcM8/EM87qxUOvYUpcM2fH7KdxjRTETFelNL_gCLcBGAsYHQ/s2048/IMG_4278.jpg", video_url:"")
 texture_exploring.category = cognitive
 texture_exploring.save!
 
