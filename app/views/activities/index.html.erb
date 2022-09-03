@@ -1,5 +1,24 @@
-<% content_for :title do %>
-  Try these out!
-<% end %>
 
-<h1>All Activities</h1>
+<% content_for :title do %>
+<h1>Try these out! </h1>
+<% end %>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+   <% @activities.each do |activity| %>
+    <div class="<% if activity.id % 2 == 0%>
+     col-6
+     <% else %>
+     col-3
+     <% end %>">
+        <div class="card bg-white text-white">
+          <%= link_to activity do %>
+            <%= image_tag(activity.image_url, class: "card-img explore") %>
+          <% end %>
+        </div>
+    </div>
+   <% end %>
+  </div>
+</div>
