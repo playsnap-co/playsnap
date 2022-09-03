@@ -19,30 +19,10 @@
           <label for="ageRange" class="form-label">for</label>
 
           <%= f.select(:age_group, [["0 - 12 mths", "1"], ["12 - 24 mths", "2"], ["24 - 36 mths", "3"]], {}, {class: "form-select form-select-lg mb-3"}) %>
-          <br>
 
           <label for="category" class="form-label">to develop</label>
-          <br>
+
           <%= f.select(:category_id,Category.all.map { |c| [c.sort.titleize, c.id] } , {}, {class: "form-select form-select-lg mb-3"}) %>
-          <br>
-
-          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
-            <option selected>age</option>
-            <option value="1">0 - 12 mths</option>
-            <option value="2">12 - 24 mths</option>
-            <option value="3">24 - 36 mths</option>
-          </select>
-
-          <label for="category" class="form-label">to develop</label>
-          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
-            <option selected>development area</option>
-            <option value="1">Gross motor</option>
-            <option value="2">Fine Physical</option>
-            <option value="3">Emotional</option>
-            <option value="3">Cognitive</option>
-          </select>
-
-
              <div class="form-actions text-center">
               <%= f.button "Search", class:"btn btn-primary btn-action"%>
             </div>
