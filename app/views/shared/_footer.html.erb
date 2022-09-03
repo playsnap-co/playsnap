@@ -1,14 +1,14 @@
 <nav class="bottom-nav">
   <div class="footer d-inline-flex">
     <div class="footer-element ">
-      <%# <%= link_to explore_path do %>
-      <span class="material-symbols-outlined">search</span>
-      <%# <% end %>
+      <%= link_to root_path do %>
+        <span class="material-symbols-outlined">search</span>
+      <% end %>
     </div>
     <div class="footer-element">
-      <%# <%= link_to explore_path do %>
+      <%= link_to activities_path do %>
         <span class="material-symbols-outlined">dashboard</span>
-      <%# <% end %>
+      <% end %>
     </div>
     <div class="footer-element">
       <%# <%= link_to wishlist_path do %>
@@ -16,9 +16,9 @@
       <%# <% end %>
     </div>
     <div class="footer-element">
-      <%# <%= link_to wishlist_path do %>
+      <%= link_to current_user ? user_path(current_user) : new_user_session_path do %>
       <span class="material-symbols-outlined">person</span>
-      <%# <% end %>
+      <% end %>
     </div>
   </div>
 </nav>

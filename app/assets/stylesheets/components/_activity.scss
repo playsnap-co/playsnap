@@ -1,6 +1,8 @@
 .activity {
   &-image{
     margin-top: 54px;
+    height: 250px;
+    object-fit: cover;
   }
 
   .row {

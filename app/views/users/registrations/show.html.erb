@@ -2,4 +2,35 @@
   Parent profile
 <% end %>
 
-<h1>hello world</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12.col-sm-3.col-sm-offset-4">
+      <div class="profile text-center">
+
+           <%= image_tag("parent_avatar.png", style: "width: 100px") %>
+        <br>
+
+        <div class="profile-card mb-3">
+          <div>
+            <%# placeholder for color %>
+          </div>
+          <div class="parent-profile">
+            <p>Parent's profile</p>
+          </div>
+        </div>
+
+        <div class="profile-card mb-3">Child's profile
+        </div>
+
+        <div class="profile-card mb-3">Child's profile
+        </div>
+
+      <%# select class="form-select form-select-lg mb-3" %>
+
+        <%# <div class="form-actions text-center">
+          <%= f.button "Add child", class:"btn btn-primary btn-action" %>
+        <%# </div> %>
+      </div>
+    </div>
+  </div>
+</div>
