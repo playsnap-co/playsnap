@@ -8,14 +8,14 @@
       <div class="homepage">
 
         <h4>Independent play activities with ANYTHING you have on hand, in a snap!</h4>
-          <br>
           <label for="objectToSearch" class="form-label">I have</label>
-          <%= form_with url: activities_path, method: :get, html: {class:
-                    "mb-4"} do |f| %>
+          <%= form_with url: activities_path,
+                        method: :get, html:
+                        {class: "mb-3"} do |f| %>
           <%= f.text_field :query,
-                          class: "form-control",
-                          placeholder: "object" %>
-          <br>
+                            class: "form-control",
+                            placeholder: "object" %>
+
           <label for="ageRange" class="form-label">for</label>
           <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
             <option selected>age</option>
@@ -23,10 +23,8 @@
             <option value="2">12 - 24 mths</option>
             <option value="3">24 - 36 mths</option>
           </select>
-          <br>
 
           <label for="category" class="form-label">to develop</label>
-          <br>
           <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
             <option selected>development area</option>
             <option value="1">Gross motor</option>
@@ -34,7 +32,7 @@
             <option value="3">Emotional</option>
             <option value="3">Cognitive</option>
           </select>
-          <br>
+
              <div class="form-actions text-center">
               <%= f.button "Search", class:"btn btn-primary btn-action"%>
             </div>
