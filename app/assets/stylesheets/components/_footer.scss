@@ -12,6 +12,15 @@
 }
 
 .footer-element {
+  a {
+    color: $white;
+
+    &:hover {
+      opacity: 0.85;
+      color: black;
+    }
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,12 +28,6 @@
   text-decoration: none;
   justify-content:space-around;
   vertical-align: middle;
-  color: white;
+  color: $white;
   width: 65px;
-
-
-  &:hover {
-    opacity: 0.85;
-    color: black;
-  }
 }
