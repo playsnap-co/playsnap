@@ -1,5 +1,22 @@
-<% content_for :title do %>
-  Try these out!
-<% end %>
 
-<h1>All Activities</h1>
+<% content_for :title do %>
+<h1>Try these out! </h1>
+<% end %>
+<br>
+<br>
+<br>
+<div class="container explorecard">
+ <div class="embed-responsive embed-responsive-16by9">
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 explorecard">
+   <% @activities.each do |activity| %>
+    <div class="col-4">
+        <div class="card bg-white text-white">
+          <%= link_to activity do %>
+            <%= image_tag(activity.image_url, class: "card-img explore") %>
+          <% end %>
+        </div>
+    </div>
+   <% end %>
+  </div>
+ </div>
+</div>
