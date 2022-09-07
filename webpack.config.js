@@ -1,11 +1,11 @@
-const path    = require("path")
-const webpack = require("webpack")
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "production",
   devtool: "source-map",
   entry: {
-    application: "./app/javascript/application.js"
+    application: "./app/javascript/application.js",
   },
   output: {
     filename: "[name].js",
@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 1
-    })
-  ]
-}
+      maxChunks: 1,
+    }),
+  ],
+};
