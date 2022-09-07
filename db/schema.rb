@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_03_075851) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_120354) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,18 +20,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_03_075851) do
     t.bigint "category_id", null: false
     t.string "image_url", default: "", null: false
     t.string "video_url"
-    t.integer "age_group", null: false
+    t.string "age_group", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "object"
     t.index ["category_id"], name: "index_activities_on_category_id"
-    t.check_constraint "age_group > 0 AND age_group <= 3", name: "age_group_check"
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "sort", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "sort", null: false
   end
 
   create_table "child_activities", force: :cascade do |t|
