@@ -5,7 +5,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   def show
+    @resource = User.find(params[:id])
   end
+  # check with YC to confirm if should be link to child controller
 
   # GET /resource/sign_up
   # def new
