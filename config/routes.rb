@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users,
-             controllers: {
-               registrations: "users/registrations",
-             }
+  devise_for :users, controllers: { registrations: "users/registrations" } do
+    resources :children
+    resources :wishlists
+    resources :reviews
+  end
 
   devise_scope :user do
     get "users/:id", to: "users/registrations#show", as: :user
@@ -16,6 +17,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :activities, only: [:index, :show, :edit]
-
+  resources :activities, only: %i[index show edit]
 end
