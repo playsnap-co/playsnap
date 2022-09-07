@@ -11,6 +11,6 @@ class CreateActivities < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    # add_check_constraint :activities, "age_group > 0 AND age_group <= 3", name: "age_group_check"
+    add_check_constraint :activities, "age_group > 0 AND age_group <= 3", name: "age_group_check"
   end
 end
