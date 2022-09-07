@@ -7,13 +7,13 @@
     <div class="col-xs-12.col-sm-3.col-sm-offset-4">
       <div class="homepage">
 
-        <h4>Independent play activities with ANYTHING you have on hand, in a snap!</h4>
+        <h4 class="mb-3">Independent play activities with ANYTHING you have on hand, in a snap!</h4>
           <label for="objectToSearch" class="form-label">I have</label>
           <%= form_with url: activities_path,
                         method: :get, html:
                         {class: "mb-3"} do |f| %>
           <%= f.text_field :query,
-                            class: "form-control",
+                            class: "form-control mb-3",
                             placeholder: "object" %>
 
           <label for="ageRange" class="form-label">for</label>
