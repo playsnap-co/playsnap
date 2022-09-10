@@ -1,13 +1,16 @@
 class ActivitiesController < ApplicationController
   def index
-    if params[:query].present?
-      sql_query = "object ILIKE :query AND age_group = :age_group AND category_id = :category_id"
-      @activities = Activity.where(sql_query, query: "%#{params[:query]}%", age_group: "#{params[:age_group]}", category_id: "#{params[:category_id]}" )
-      @category = Category.find(params[:category_id]).sort
-      @age_group = "#{params[:age_group]}"
-    else
-      @activities = Activity.all.sample(25)
-    end
+    sql_query = []
+
+    sql_query << "object ILIKE '#{params[:query]}'" if params[:query].present?
+    sql_query << "age_group = '#{params[:age_group]}'" if params[:age_group].present?
+    sql_query << "category_id = #{params[:category_id]}" if params[:category_id].present?
+
+    @activities = Activity.where(sql_query.join(" AND "))
+
+    @category = Category.find(params[:category_id]).name if params[:category_id].present?
+    @age_group = "#{params[:age_group]}"
+
   end
 
   def new

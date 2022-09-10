@@ -7,7 +7,7 @@
   <div class="container">
     <div class="mt-2">
       <span class="badge rounded-pill bg-info text-dark"><%= @activity.age_group %></span>
-      <span class="badge rounded-pill bg-info text-dark"><%= @activity.category.sort.titleize %></span>
+      <span class="badge rounded-pill bg-info text-dark"><%= @activity.category.name.titleize %></span>
     </div>
     <div class="mt-2 d-flex justify-content-between activity-title">
       <span><%= @activity.title %></span>

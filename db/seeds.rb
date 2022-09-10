@@ -21,6 +21,7 @@ puts "Creating Children"
 end
 
 puts 'Creating Categories...'
+
 social = Category.new(name: "social")
 social.save!
 
