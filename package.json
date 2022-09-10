@@ -10,6 +10,12 @@
     "webpack-cli": "^4.10.0"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "prettier:fix": "yarn prettier --write '*'",
+    "prettier:check": "yarn prettier --check '*'"
+  },
+  "devDependencies": {
+    "@prettier/plugin-ruby": "^3.2.0",
+    "prettier": "^2.7.1"
   }
 }
