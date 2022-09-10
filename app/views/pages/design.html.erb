@@ -1,11 +1,32 @@
-buttons design
-<br>
-<br>
+<% content_for :title do %>
+  <h3>Design Guideline</h3>
+<% end %>
 
-<button type="button" class="btn btn-primary btn-action">Primary</button>
-<br>
-<br>
-<button type="button" class="btn btn-outline-primary btn-action">Primary</button>
-<br>
-<br>
-<span class="badge rounded-pill bg-info text-dark">Info</span>
+<div class="container">
+  <h5>Color</h5>
+  <div class="row mb-3" style="margin-left: 0px;">
+    <div style="height: 50px; width: 50px; background-color: #949CDF"></div>
+    <div style="height: 50px; width: 50px; background-color: #7CC9D7"></div>
+    <div style="height: 50px; width: 50px; background-color: #A3D2CA"></div>
+  </div>
+  <h5>Button</h5>
+  <div class="mb-3">
+    <button type="button" class="btn btn-primary btn-action">Btn Primary</button>
+    <button type="button" class="btn btn-outline-primary btn-action">Btn Outline Primary</button>
+  </div>
+  <h5>Badge</h5>
+  <div class="mb-3">
+    <span class="badge rounded-pill bg-info text-dark">Info</span>
+  </div>
+  <h5>Input field</h5>
+  <form action="/" class="col-6 mb-3">
+    <label for="comment">Comment</label>
+    <input class="form-control" type="text" id="comment" placeholder="Enter your comment">
+  </form>
+  <h5>Font</h5>
+  <p>
+    <div>Nav title eg. Design Guideline: h3</div>
+    <div>Page header: ??</div>
+    <div>Page content: ??</div>
+  </p>
+</div>
