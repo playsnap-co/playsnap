@@ -1,6 +1,5 @@
 .activity {
-  &-image{
-    margin-top: 54px;
+  &-image {
     height: 250px;
     object-fit: cover;
   }
@@ -9,7 +8,7 @@
     --bs-gutter-x: 0;
   }
 
-  &-title{
+  &-title {
     font-size: 24px;
   }
 
