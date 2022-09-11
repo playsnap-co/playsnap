@@ -12,7 +12,7 @@ Category.delete_all
 
 puts "Creating Users"
 ["goh", "kyla", "yaamani", "jielin"].each do |user|
-  User.create(username: user, email: "#{user}@playsnap.com", password: 123456)
+  User.create(username: user, email: "#{user}@playsnap.com", password: "playsnap")
 end
 
 puts "Creating Children"
