@@ -11,15 +11,15 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  test "should get index" do
-    get reviews_url
-    assert_response :success
-  end
+  # test "should get index" do
+  #   get reviews_url
+  #   assert_response :success
+  # end
 
-  test "should get new" do
-    get new_review_url
-    assert_response :success
-  end
+  # test "should get new" do
+  #   get new_review_url
+  #   assert_response :success
+  # end
 
   # test "should create review" do
   #   assert_difference("Review.count") { post reviews_url, params: @params }
