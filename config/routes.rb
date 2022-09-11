@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "users/registrations" }
 
   devise_scope :user do
-    get "profile", to: "users/registrations#show", as: :user
+    get "users/:id", to: "users/registrations#show", as: :user
   end
 
   resources :children
