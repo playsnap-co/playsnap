@@ -22,6 +22,7 @@ class ChildrenController < ApplicationController
   # POST /children or /children.json
   def create
     @child = Child.new(child_params)
+    @child.user = current_user
 
     respond_to do |format|
       if @child.save
@@ -78,6 +79,6 @@ class ChildrenController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def child_params
-    params.fetch(:child, {})
+    params.require(:child).permit(:name, :age, :gender)
   end
 end
