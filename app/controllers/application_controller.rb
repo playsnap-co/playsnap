@@ -17,15 +17,13 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(
-      :account_update,
-      keys: %i[username email]
-    )
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[username email])
   end
 
   private
 
   def skip_pundit?
-    devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+    devise_controller? ||
+      params[:controller] =~ /(^(rails_)?admin)|(^pages$)|(^activities$)/
   end
 end

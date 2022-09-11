@@ -48,7 +48,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
     # For additional fields in app/views/devise/registrations/new.html.erb
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[username email])
+  end
+
+  def configure_permitted_parameters
+    # For additional in app/views/devise/registrations/edit.html.erb
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[username])
   end
 
   # If you have extra params to permit, append them to the sanitizer.

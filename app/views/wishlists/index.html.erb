@@ -11,4 +11,4 @@
   <% end %>
 </div>
 
-<%= link_to "New wishlist", new_wishlist_path %>
+<%= link_to "New wishlist", new_wishlist_path if policy(Wishlist).new? %>

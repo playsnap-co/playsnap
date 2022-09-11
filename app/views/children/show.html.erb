@@ -16,4 +16,11 @@
       </div>
     </div>
   </div>
+<div>
+  <% if policy(@child).edit? %>
+    <%= link_to "Edit this child", edit_child_path(@child) %> |
+  <% end %>
+  <%= link_to "Back to children", children_path %>
+
+  <%= button_to "Destroy this child", @child, method: :delete if policy(@child).destroy? %>
 </div>
