@@ -21,19 +21,20 @@ puts "Creating Children"
 end
 
 puts 'Creating Categories...'
-social = Category.new(sort: "social")
+
+social = Category.new(name: "social")
 social.save!
 
-emotional = Category.new(sort: "emotional")
+emotional = Category.new(name: "emotional")
 emotional.save!
 
-cognitive = Category.new(sort: "cognitive")
+cognitive = Category.new(name: "cognitive")
 cognitive.save!
 
-physical = Category.new(sort: "physical")
+physical = Category.new(name: "physical")
 physical.save!
 
-gross_motor = Category.new(sort: "gross motor")
+gross_motor = Category.new(name: "gross motor")
 gross_motor.save!
 
 puts 'Finished!'

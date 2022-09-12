@@ -6,10 +6,14 @@
 <br>
 <br>
 <div class="container explorecard">
- <div class="embed-responsive embed-responsive-16by9">
- <br>
-  <span class="badge rounded-pill bg-info text-dark"><%= @category %></span>
-  <span class="badge rounded-pill bg-info text-dark"><%= @age_group %></span>
+  <div class="embed-responsive embed-responsive-16by9">
+  <br>
+    <% if @category != "Select A Category" %>
+      <span class="badge rounded-pill bg-info text-dark"><%= @category %></span>
+    <% end %>
+    <% if @age_group != "Select Age Group" %>
+      <span class="badge rounded-pill bg-info text-dark"><%= @age_group %></span>
+    <% end %>
   <br>
   <br>
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 explorecard">

@@ -5,28 +5,32 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12.col-sm-3.col-sm-offset-4">
-      <div class="homepage">
+      <div class="homepage" data-controller="autocomplete">
 
-        <h4 class="mb-3">Independent play activities with ANYTHING you have on hand, in a snap!</h4>
-          <label for="objectToSearch" class="form-label">I have</label>
-          <%= form_with url: activities_path,
-                        method: :get, html:
-                        {class: "mb-3"} do |f| %>
+        <h4>Independent play activities with ANYTHING you have on hand, in a snap!</h4>
+        <label for="objectToSearch" class="form-label">I have</label>
+        <%= form_with url: activities_path,
+                      method: :get, html:
+                      {class: "mb-3", data: {autocomplete_target: "form"}} do |f| %>
           <%= f.text_field :query,
-                            class: "form-control mb-3",
-                            placeholder: "object" %>
+                            class: "form-control",
+                            placeholder: "Object",
+                            required: true,
+                            data: {autocomplete_target: "input",
+                            action: "keyup->autocomplete#update"} %>
+          <div data-autocomplete-target="list"></div>
+
+
 
           <label for="ageRange" class="form-label">for</label>
-
-          <%= f.select(:age_group, ["0 - 12 mths", "12 - 24 mths", "24 - 36 mths"], {}, {class: "form-select form-select-lg mb-3"}) %>
+          <%= f.select(:age_group, [["Select age group",""],"0 - 12 mths", "12 - 24 mths", "24 - 36 mths"], {}, {class: "form-select form-select-lg mb-3"}) %>
 
           <label for="category" class="form-label">to develop</label>
-
-          <%= f.select(:category_id,Category.all.map { |c| [c.sort.titleize, c.id] } , {}, {class: "form-select form-select-lg mb-3"}) %>
-             <div class="form-actions text-center">
-              <%= f.button "Search", class:"btn btn-primary btn-action"%>
-            </div>
-            <% end %>
+          <%= f.select(:category_id, Category.all.map { |c| [c.name.titleize, c.id] }.unshift(["Select a category",""]), {}, {class: "form-select form-select-lg mb-3"}) %>
+          <div class="form-actions text-center">
+            <%= f.button "Search", class:"btn btn-primary btn-action"%>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
