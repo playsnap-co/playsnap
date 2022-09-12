@@ -11,29 +11,18 @@
         <br>
         <br>
 
+        <%= link_to edit_user_registration_path(resource_name) do %>
         <div class="profile-card mb-3">
-          <div class ="purple-box">
-          </div>
-          <div class="profile-text">
-            <%= link_to "Parent's profile", edit_user_registration_path(resource_name)%>
-
-            <%# <%= const route = document.querySelector(".profile-text");
-              profile-text.addEventListener("click", (event) => {
-                console.log(event);
-              }); %>
-
-            <%# <div onclick="/users/${id}='/users/edit.user';">&nbsp;
-              <%# <div onclick="location.href='newurl.html';">&nbsp;</div> %>
-              <%# neeed to check how to make this work %>
-            <%# </div> %>
-          </div>
+          <div class ="purple-box"></div>
+          <div class="profile-text">Parent's profile</div>
         </div>
+        <% end %>
 
         <div class="profile-card mb-3">
           <div class ="pink-box">
           </div>
           <div class="profile-text">
-            <%= link_to "Child's profile", child_path(resource_name)%>
+            <%= link_to "Child's profile", child_path(@resource.children.first)%>
           </div>
         </div>
 
