@@ -11,21 +11,19 @@
         <br>
         <br>
 
+        <%= link_to edit_user_registration_path(resource_name) do %>
         <div class="profile-card mb-3">
-          <div class ="purple-box">
-          </div>
-          <div class="profile-text">
-           <%= link_to "Parent's profile", edit_user_registration_path(resource_name)%>
-          </div>
+          <div class ="purple-box"></div>
+          <div class="profile-text">Parent's profile</div>
         </div>
+        <% end %>
 
         <div class="profile-card mb-3">
           <div class ="pink-box">
           </div>
           <div class="profile-text">
-            Child's profile
+            <%= link_to "Child's profile", child_path(@resource.children.first)%>
           </div>
-           <%# <%= link_to child_path do %>
         </div>
 
         <div class="profile-card mb-3">
