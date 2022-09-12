@@ -19,6 +19,7 @@
     height: 68px;
     z-index: -1;
     background-color: $purple;
+
   }
 
   .pink-box {
@@ -39,5 +40,11 @@
     display: flex;
     align-items: center;
     padding: 20px;
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
