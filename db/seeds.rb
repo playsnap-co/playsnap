@@ -5,20 +5,31 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Child.delete_all
-User.delete_all
-Activity.delete_all
-Category.delete_all
+Child.destroy_all
+User.destroy_all
+Activity.destroy_all
+Category.destroy_all
 
 puts "Creating Users"
 ["goh", "kyla", "yaamani", "jielin"].each do |user|
-  User.create(username: user, email: "#{user}@playsnap.com", password: "playsnap")
+  parent_profile = User.create(
+    username: user,
+    email: "#{user}@playsnap.com",
+    password: "playsnap"
+    )
+  puts "Finished creating users"
+
+  puts "Creating Child"
+  Child.create(
+    name: ["danielle", "whysee", "easun", "annie"].sample,
+    age: (0..36).to_a.sample,
+    gender: ["male", "female"].sample,
+    user_id: parent_profile.id
+  )
+  puts "Finished creating child"
+  puts "Finished creating users with children"
 end
 
-puts "Creating Children"
-["danielle", "whysee", "easun", "annie"].each_with_index do |user, index|
-  Child.create(name: user, age: index, gender: ["male", "female"].sample, user_id: index + 1)
-end
 
 puts 'Creating Categories...'
 
