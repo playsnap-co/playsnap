@@ -9,7 +9,8 @@ class ActivitiesController < ApplicationController
     @activities = Activity.where(sql_query.join(" AND "))
 
     @category = Category.find(params[:category_id]).name if params[:category_id].present?
-    @age_group = "#{params[:age_group]}"
+    # @age_group = "#{params[:age_group]}"
+    @age_group = params[:age_group].to_s
 
   end
 

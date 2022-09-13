@@ -7,7 +7,7 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
     @review = reviews(:lion)
     @params = {
       rating: 5,
-      content: "Feed the lion activity is the best for physical development"
+      content: "Feed the lion activity is the best for fine motor development"
     }
   end
 
