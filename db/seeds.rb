@@ -57,7 +57,7 @@ Activity.create(
       title: "Ball Up",
       description: "Encourage the children to work together to keep the ball up in the air.",
       object: "Ball",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://www.verywellfamily.com/old-fashioned-ball-games-for-kids-1696146",
       video_url: "",
       category: social
@@ -68,7 +68,7 @@ Activity.create(
       where everyone races at once to the finish line. Or complete an
       alternating relay.",
       object: "Balls, Spoons",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://www.beafunmum.com/wp-content/uploads/2015/03/BigW-Easter_092.jpg",
       video_url: "",
       category: social
@@ -84,7 +84,7 @@ Activity.create(
       title: "Let's Cook",
       description: "Act out how to prepare meals and eating together with your child.",
       object: "",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Kids%27s_game_cooking_yakisoba_by_yamakazz.jpg",
       video_url: "",
       category: emotional
@@ -95,7 +95,7 @@ Activity.create(
       You may ask questions such as 'Why did the character feel sad', or 'How do you
       think this made him / her feel?'",
       object: "Storybook",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://www.parents.com/thmb/Gcsnu4v_x1j02kptKX08Jgq0WL4=/1600x1200/smart/filters:no_upscale()/noltelourens-2fd83e1022184dcbaca0cbd17d1759ce.jpg",
       video_url: "",
       category: emotional
@@ -106,7 +106,7 @@ Activity.create(
       child can recognise and understand emotions. Interactions can include asking
       your child how should the puppet respond, or if the puppet's behaviour is acceptable.",
       object: "Puppet",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://empoweredparents.co/wp-content/uploads/2019/10/social-emotional-activities-for-preschoolers-3.jpg.webp",
       video_url: "",
       category: emotional
@@ -116,7 +116,7 @@ Activity.create(
       description: "This simple game encourages your child to understand game rules,
       taking turns, and controlling their emotions when they are frustrated.",
       object: "",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://img.freepik.com/premium-photo/cute-kids-play-stone-paper-scissors-have-fun-white-background_332033-262.jpg?w=2000",
       video_url: "",
       category: emotional
@@ -125,7 +125,7 @@ Activity.create(
       title: "Share My Snacks",
       description: "Ask your child to share his / her favourite snacks with the people around.",
       object: "Snacks",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://cdn.cdnparenting.com/articles/2018/04/617915693-H.jpg",
       video_url: "",
       category: emotional
@@ -135,7 +135,7 @@ Activity.create(
       description: "Encourage your child to say something kind or polite such as
       'please', 'thank you', and 'I love you' to people around them.",
       object: "",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "http://www.enannysource.com/blog/wp-content/uploads/2012/02/thankyou.jpg",
       video_url: "",
       category: emotional
@@ -145,7 +145,7 @@ Activity.create(
       description: "Encourage your child to scribble or draw their emotions, and
       talk about it.",
       object: "Colour Pencils, Paper",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://live.staticflickr.com/324/18626345783_5a136635a0_b.jpg",
       video_url: "",
       category: emotional
@@ -156,7 +156,7 @@ Activity.create(
       breathing techniques which could be applied when they are feeling anxious.
       You may also play pretend to blow and pop the bubbles to release their frustrations",
       object: "Soap",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://www.merakilane.com/wp-content/uploads/2018/03/Breathing-Techniques-for-Anxiety.png",
       video_url: "",
       category: emotional
@@ -166,7 +166,7 @@ Activity.create(
       description: "Encourage your child to cheer up their soft toy who is feeling
       upset by using words of encouragement, giving hugs, problem-solving etc.",
       object: "Toy",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://live.staticflickr.com/4025/4621636637_96f7f3832b.jpg",
       video_url: "",
       category: emotional
@@ -176,7 +176,7 @@ Activity.create(
       description: "Play a fun game of Simon Says to get your child to listen
       closely to your instructions and performing them accordingly.",
       object: "",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://empoweredparents.co/wp-content/uploads/2021/10/Children-playing-Simon-Says.jpg",
       video_url: "",
       category: emotional
@@ -193,7 +193,7 @@ Activity.create(
       description: "Ask your child to find items of the same colour and place
       them in a matching bowl.",
       object: "Bowls",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_c4-7bacY1fbVq0TGtibhCTj6VCPM3CyRsCuKlywKY2-yPR1AxLimR6ufg-oUbi-FckE&usqp=CAU",
       video_url: "",
       category: cognitive
@@ -202,7 +202,7 @@ Activity.create(
       title: "Matching Lids",
       description: "All you need is a couple of empty plastic bottles and lids.",
       object: "Bottles",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://cdn.handsonaswegrow.com/wp-content/uploads/2016/04/Sequence.jpg",
       video_url: "",
       category: cognitive
@@ -214,7 +214,7 @@ Activity.create(
       You can also use flashlights for the search or hide several objects at
       one time.",
       object: "Toys",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmM1r4yoiBSrIM3dffw3ZMED054peYBUgwoDVLcOR9jq9drNuwGqdOYbm8_PLUx9jwzcA&usqp=CAU",
       video_url: "",
       category: cognitive
@@ -225,7 +225,7 @@ Activity.create(
       green light, they must move around really quickly, orange light, they go slowly
       and red light they have to stop and stand still." ,
       object: "",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7LjoTO70SVAaf1KavGbKS91Pl4qgV5bHcQ&usqp=CAU",
       video_url: "",
       category: cognitive
@@ -235,7 +235,7 @@ Activity.create(
       description: "Anything that pops in your mind! Hint: Twinkle twinkle little star!
       Cocomelon if you need extra help.",
       object: "",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "http://www.readingbrightstart.org/wp-content/uploads/2015/03/animal-singalong.jpg",
       video_url: "",
       category: cognitive
@@ -244,7 +244,7 @@ Activity.create(
       title: "Guess The Animal",
       description: "Make some animal sounds and ask the your child what animal it is.",
       object: "",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://play-lh.googleusercontent.com/MWG4adp0FnC_otvGjVeyPYs2FiqaaE-z-obZH4Zp0BAzC4bREeDAk_kf0oirzjA8FRo",
       video_url: "",
       category: cognitive
@@ -253,7 +253,7 @@ Activity.create(
       title: "Learning Colours",
       description: "Point to the item and say the colour and what it is.",
       object: "",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6CkSwE2rMT52IwE3LwYA3lr8gySlFkqBog&usqp=CAU",
       video_url: "",
       category: cognitive
@@ -295,7 +295,7 @@ Activity.create(
       stacked items together, and then when the tower is complete, your child
       can knock it down.",
       object: "Blocks",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://www.howwemontessori.com/.a/6a0147e1d4f40f970b017743f34f16970d-pi",
       video_url: "",
       category: fine_motor
@@ -307,7 +307,7 @@ Activity.create(
       caution with younger children who might bite foam balls.
       Avoid small balls that toddlers could put in their mouths and swallow.",
       object: "Ball, Basket",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://i.shgcdn.com/a75502b6-303a-457d-a3aa-748cb16dd231/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
       video_url: "",
       category: fine_motor
@@ -319,7 +319,7 @@ Activity.create(
       you and your child can throw sponges of different sizes or how different
       amounts of water affect the distance the sponge travels.",
       object: "Sponges, Water, Container",
-      age_group:"24 - 36 mths",
+      age_group:"25 - 36 mths",
       image_url: "https://playtivities.com/wp-content/uploads/2021/05/13-sponge-toss.jpg.webp",
       video_url: "",
       category: fine_motor
@@ -331,7 +331,7 @@ Activity.create(
       between two children, such as a chair or pillow, and instruct them to hit
       the balloon over the barrier to the other child.",
       object: "Balloon",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://www.hellowonderful.co/wp-content/uploads/2020/03/balloon-tennis-game-kids.jpg.webp",
       video_url: "",
       category: fine_motor
@@ -343,7 +343,7 @@ Activity.create(
       try to toss them into the lion's mouth. Afterward, count how many balls
       they have fed the lion.",
       object: "Cardboard, Paper",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://rainydaymum.co.uk/wp-content/uploads/2018/04/feed-the-lion-counting-game-for-toddlers-and-preschoolers-feature.jpg",
       video_url: "",
       category: fine_motor
@@ -361,7 +361,7 @@ Activity.create(
       title: "Drawing",
       description: "Little artists can express themselves by drawing on a layer of flour on a tray.",
       object: "Flour",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://i.ytimg.com/vi/qXXB72t7kCc/maxresdefault.jpg",
       video_url: "",
       category: fine_motor
@@ -371,7 +371,7 @@ Activity.create(
       description: "Give your child a mini broom and dustpan, and spend
       some time making the floor all spick and span.",
       object: "Broom, Dustpan",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVO2pmNE9cUGvyXBUuE_ZXS5gke-sKWNTcJA&usqp=CAU",
       video_url: "",
       category: fine_motor
@@ -381,7 +381,7 @@ Activity.create(
       description: "Let your child peel and stick tape on the floor, tray, wall, etc.
       You can also create patterns with coloured tapes with your child!" ,
       object: "Tape",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://laughingkidslearn.com/wp-content/uploads/2016/01/Pulling-sticky-tape-off-table.jpg",
       video_url: "",
       category: fine_motor
@@ -390,7 +390,7 @@ Activity.create(
       title: "Foil Art",
       description: "Ball the foil up into shapes, cover items or make imprints of them.",
       object: "Foil",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://rukminim1.flixcart.com/image/800/800/k1118cw0/foil-shrinkwrap/n/z/q/9-af9m-supreme-bazaar-original-imafjz887cmsumfh.jpeg?q=90",
       video_url: "",
       category: fine_motor
@@ -399,7 +399,7 @@ Activity.create(
       title:"Stacking Cups",
       description: "Stack cups as high as you and your child can!",
       object: "Cups",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://cdn.handsonaswegrow.com/wp-content/uploads/2012/05/2012_05_092.jpg",
       video_url: "",
       category: fine_motor
@@ -430,7 +430,7 @@ Activity.create(
       They can arch their backs, roll on their backs, reach as high as they can and walk on all fours.
       Choose a variety of animals and movements to keep children engaged and using their whole bodies to stay active.",
       object: "",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://lemonlimeadventures.com/wp-content/uploads/2015/01/Animal-Walk-Exercises.jpg",
       video_url: "",
       category: gross_motor
@@ -452,7 +452,7 @@ Activity.create(
       description: "Put a small ball on top of a paper cup. Practice only
       kicking the ball off the cup without knocking the cup over." ,
       object: "Ball, Cup",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://www.ordinaryreviews.com/wp-content/uploads/2019/07/ball-and-cup-carnival-games-800x451.jpg",
       video_url: "",
       category: gross_motor
@@ -461,7 +461,7 @@ Activity.create(
       title: "Tug of War",
       description: "Play tug of war with a towel.",
       object: "Towel",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://t7.xframe.io/000/102/817/102817.jpg?auto=format&fit=crop&w=800&q=80&ixlib=react-9.4.0",
       video_url: "",
       category: gross_motor
@@ -471,7 +471,7 @@ Activity.create(
       description: "Do step ups using a small stool. You may play music for
       your child to follow the tempo.",
       object: "Stool",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://tracycosmetic.com/wp-content/uploads/2022/07/61kRXeV8pKL._AC_SL1500_-600x1084.jpg",
       video_url: "",
       category: gross_motor
@@ -480,7 +480,7 @@ Activity.create(
       title: "Bowling",
       description: "Use cups and set up bowling. Bowl with a ball or roll into the cups with your body.",
       object: "Ball, Cups",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://i.pinimg.com/originals/71/58/bb/7158bb49e55575a6bf437611f0a9071b.jpg",
       video_url: "",
       category: gross_motor
@@ -489,7 +489,7 @@ Activity.create(
       title: "Mountain Jump",
       description: "Jump over paper cups. Stack them higher after each successful jump!" ,
       object: "Cups",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://mykidcraft.com/images/Christmas-Tree-Stacking-Christmas-Tree-Paper-Cups-Toddler-Activity1.jpg",
       video_url: "",
       category: gross_motor
@@ -498,7 +498,7 @@ Activity.create(
       title:"Side to Side",
       description: "Jump side to side over a shoelace on the floor.",
       object: "Shoelace",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://media.istockphoto.com/photos/trendy-kid-jumping-and-screaming-picture-id1152823461?k=20&m=1152823461&s=612x612&w=0&h=gDuKP-2mHrpfufiwl8fy9DKOCGA84mPDnrwVrI1Slsk=",
       video_url: "",
       category: gross_motor
@@ -508,7 +508,7 @@ Activity.create(
       description: "As an added challenge to keeping toys or picking up laundry,
       you can ask your child to push the basket to where it is supposed to be.",
       object: "Basket",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqD26kKs0y8TjNDQ0de0e5e2PgxQdKRPZN9w&usqp=CAU",
       video_url: "",
       category: gross_motor
@@ -519,7 +519,7 @@ Activity.create(
       your child to walk along. You can extend the path all around the house to
       keep them entertained for hours!",
       object: "Tape",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://cdn.handsonaswegrow.com/wp-content/uploads/2015/06/lines-of-tape-activities-20150530-8641.jpg",
       video_url: "",
       category: gross_motor
@@ -528,7 +528,7 @@ Activity.create(
       title: "The Ball Waddle",
       description: "Place a ball between your child knees and get them to waddle across the room without dropping it.",
       object: "Ball",
-      age_group: "24 - 36 mths",
+      age_group: "25 - 36 mths",
       image_url: "https://www.yourkidsot.com/uploads/2/4/0/3/24030117/2_1_orig.png",
       video_url: "",
       category: gross_motor
@@ -538,7 +538,7 @@ Activity.create(
       description: "Use a stopwatch and record how long your child can balance on one foot.
       With each repetition, they may also switch legs as the goal is to beat their time." ,
       object: "",
-      age_group: "12 - 24 mths",
+      age_group: "13 - 24 mths",
       image_url: "https://theinspiredtreehouse.com/wp-content/uploads/2017/04/single-leg-stance-twitter.png",
       video_url: "",
       category: gross_motor
@@ -546,45 +546,5 @@ Activity.create(
   ]
 )
 puts "Created gross motor activities!"
-
-
-
-
-# bucket_transfer = Activity.new(title:"Bucket Transfer", description: "Take two bowls and place one at one end of the room and one somewhere farther away.How fast can you transfer all of the balls to the empty bucket? Items required: ball, basket" , object:"Ball, Basket", age_group:"12 - 24 mths", image_url: "https://cdn.handsonaswegrow.com/wp-content/uploads/2017/07/IMG_0460_edited1-433x650.jpg", video_url:"")
-# bucket_transfer.category = fine_motor
-# bucket_transfer.save!
-
-
-
-# sieve_pasta = Activity.new(title:"Sieve Pasta", description: "Put some dried pasta (all one shape or a mix of different shapes) into a big plastic bowl. Hand your child a plastic jug or spoon and a sieve for lots of scooping, collecting, sorting and pouring. Items required: Bowl, Pasta", object:"Bowl, Pasta", age_group:"12 - 24 mths", image_url:"https://4.bp.blogspot.com/-g7lbb-xl3Rw/Vz28Y-PfB3I/AAAAAAAAFz0/zjOjpdE4doAWXDX8nfiA_s__WF_eREGIQCKgB/s1600/threading%2Bpasta%2B.png", video_url:"")
-# sieve_pasta.category = fine_motor
-# sieve_pasta.save!
-
-
-# animal_excercise = Activity.new(title:"Animal Excercise", description: "Practice walking like different animals. Items required: none" , object:"none", age_group:"12 - 24 mths", image_url:"https://pathways.org/wp-content/uploads/2019/07/toddler-boy-kid-playing-outdoor--e1643043947568.jpg", video_url:"")
-# animal_excercise.category = gross_motor
-# animal_excercise.save!
-
-# mini_soccer  = Activity.new(title:"Mini Soccer", description: "Tip an empty laundry basket or cardboard box on its side for a goal. Then let your kids kick the balloon into the goal. Record how many goals they can make in the X amount of time. Items required: ball, basket" , object:"Ball, Basket", age_group:"12 - 24 mths", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuPHK8KxNt5wem7CicGTZGpgGzmImRFfP4w&usqp=CAU", video_url:"")
-# mini_soccer.category = gross_motor
-# mini_soccer.save!
-
-
-# pillow_stacking = Activity.new(title:"Pillow Stacking", description: "A fun pillow stacking activity to encourage gross motor skills and science skills that is so much fun, too. Lets learn some physics! Items required: pillow" , object:"Pillow", age_group:"12 - 24 mths", image_url: "https://kidsactivitiesblog--o--com.follycdn.com/wp-content/uploads/2012/06/pillow-stacks.jpg", video_url:"")
-# pillow_stacking.category = gross_motor
-# pillow_stacking.save!
-
-
-# learn_letters_with_flashcards  = Activity.new(title:"Learn Letters With Flashcards", description: "Alphabets: run through A - Z, can throw in phonics and an item to associate with the letterbonus: A! Ah ah ah, Apple! A A.  Items required: flashcards" , object:"Flashcard", age_group:"12 - 24 mths", image_url: "https://images-na.ssl-images-amazon.com/images/I/61NTjFBhKbS.__AC_SX300_SY300_QL70_ML2_.jpg", video_url:"")
-# learn_letters_with_flashcards.category = cognitive
-# learn_letters_with_flashcards.save!
-
-# simple_puzzle  = Activity.new(title:"Simple Puzzle", description: "Get your toddler a two-piece puzzle that is easy to identify visually and enables your little one to use their memory and logic to complete them. Items required: puzzle", object:"Puzzle", age_group:"12 - 24 mths", image_url: "https://m.media-amazon.com/images/I/61hQL6OD5aL._AC_SX679_.jpg", video_url:"")
-# simple_puzzle.category = cognitive
-# simple_puzzle.save!
-
-# stack = Activity.new(title:"Stack", description: "Free play to stack building blocks.  Items required: wooden blocks", object:"Wooden Block", age_group:"12 - 24 mths", image_url: "https://media.istockphoto.com/photos/six-wooden-blocks-arranged-in-pyramid-shape-picture-id1269203354?k=20&m=1269203354&s=612x612&w=0&h=Cgjq7c0RRnGvIdCrWzE-vQ3N0-lc4ngM6YAJlRADb4Y=", video_url:"")
-# stack.category = cognitive
-# stack.save!
 
 puts 'Finished!'
