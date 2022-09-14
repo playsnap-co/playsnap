@@ -1,3 +1,3 @@
-<% objects.each do |obj| %>
-  <div class="dropdown-item" data-action="click->autocomplete#select"><%= obj %></div>
+<% items.each do |item| %>
+  <div class="dropdown-item" data-action="click->autocomplete#select"><%= item.name %></div>
 <% end %>
