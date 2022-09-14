@@ -18,23 +18,14 @@
         </div>
         <% end %>
 
-        <div class="profile-card mb-3">
-          <div class ="pink-box">
+        <% @resource.children.each do |child| %>
+          <%= link_to child_path(child) do %>
+          <div class="profile-card mb-3">
+            <div class ="yellow-box"></div>
+            <div class="profile-text"> <%= "#{child.name}'s profile" %> </div>
           </div>
-          <div class="profile-text">
-            <%= link_to "Child's profile", child_path(@resource.children.first)%>
-          </div>
-        </div>
-
-        <div class="profile-card mb-3">
-          <div class ="yellow-box">
-            <%# placeholder for color %>
-          </div>
-          <div class="profile-text">
-            Child's profile
-          </div>
-           <%# <%= link_to child_path do %>
-        </div>
+          <% end %>
+        <% end %>
 
      <%= simple_form_for(@resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
           <div class="form-actions text-center">
