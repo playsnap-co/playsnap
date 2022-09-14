@@ -21,12 +21,13 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user = current_user
+    @review.activity_id = params[:activity_id]
     authorize @review
 
     respond_to do |format|
       if @review.save
         format.html do
-          redirect_to review_url(@review),
+          redirect_to activity_url(@review.activity),
                       notice: "Review was successfully created."
         end
         format.json { render :show, status: :created, location: @review }
