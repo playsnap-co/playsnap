@@ -6,29 +6,29 @@ class WishlistPolicy < ApplicationPolicy
       # scope.where("name LIKE 't%'") # If users can only see wishlists starting with `t`
       # ...
     end
+  end
 
-    def show?
-      true
-    end
+  def show?
+    true
+  end
 
-    def create?
-      parent?
-    end
+  def create?
+    parent?
+  end
 
-    def update?
-      parent?
-    end
+  def update?
+    parent?
+  end
 
-    def destroy?
-      parent?
-    end
+  def destroy?
+    parent?
+  end
 
-    private
+  private
 
-    def parent?
-      record.user == user
-      # record: the wishlist passed to the `authorize` method in controller
-      # user: the `current_user` signed in with Devise
-    end
+  def parent?
+    record.user == user
+    # record: the wishlist passed to the `authorize` method in controller
+    # user: the `current_user` signed in with Devise
   end
 end
