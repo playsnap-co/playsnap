@@ -12,6 +12,7 @@ class ReviewPolicy < ApplicationPolicy
     end
 
     def create?
+      # true
       parent?
     end
 
