@@ -1,0 +1,15 @@
+<% if user_signed_in? && current_user.photo.key %>
+  <%= cl_image_tag current_user.photo.key,
+        class: "avatar-#{size || 'md'} #{ defined? classes ? classes : ''}",
+        style: pointer ? 'cursor:pointer;' : '',
+        data: data || {},
+        id: defined? id ? id :  ''
+  %>
+<% else %>
+  <%= image_tag("parent_avatar.png",
+      class: "avatar-#{size} #{ defined? classes ? classes : ''}",
+      style: pointer ? 'cursor:pointer;' : '',
+      data: data || {},
+      id: defined? id ? id : ''
+  ) %>
+<% end %>
