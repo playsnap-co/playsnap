@@ -6,7 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def show
     # for logout
-    rediect_to root_path unless current_user
+    redirect_to root_path unless current_user
 
     @resource = User.find(params[:id])
   end
