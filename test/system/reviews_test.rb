@@ -5,10 +5,11 @@ class ReviewsTest < ApplicationSystemTestCase
     george = users(:george)
     login_as george
     @review = reviews(:lion)
+    @lion = activities(:lion)
   end
 
   test "visiting the index" do
-    visit reviews_url
+    visit activity_reviews_url(@lion)
     assert_selector "h1", text: "Reviews"
   end
 
