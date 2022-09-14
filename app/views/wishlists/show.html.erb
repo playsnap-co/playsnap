@@ -3,8 +3,10 @@
 <%= render @wishlist %>
 
 <div>
-  <%= link_to "Edit this wishlist", edit_wishlist_path(@wishlist) %> |
+  <% if policy(@wishlist).edit? %>
+    <%= link_to "Edit this wishlist", edit_wishlist_path(@wishlist) %> |
+  <% end %>
   <%= link_to "Back to wishlists", wishlists_path %>
 
-  <%= button_to "Destroy this wishlist", @wishlist, method: :delete %>
+  <%= button_to "Destroy this wishlist", @wishlist, method: :delete if policy(@wishlist).destroy? %>
 </div>

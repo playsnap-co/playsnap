@@ -3,25 +3,30 @@ class WishlistsController < ApplicationController
 
   # GET /wishlists or /wishlists.json
   def index
-    @wishlists = Wishlist.all
+    @wishlists = policy_scope(Wishlist)
   end
 
   # GET /wishlists/1 or /wishlists/1.json
   def show
+    authorize @wishlist
   end
 
   # GET /wishlists/new
   def new
     @wishlist = Wishlist.new
+    authorize @wishlist
   end
 
   # GET /wishlists/1/edit
   def edit
+    authorize @wishlist
   end
 
   # POST /wishlists or /wishlists.json
   def create
     @wishlist = Wishlist.new(wishlist_params)
+    @wishlist.user = current_user
+    authorize @wishlist
 
     respond_to do |format|
       if @wishlist.save
@@ -41,6 +46,7 @@ class WishlistsController < ApplicationController
 
   # PATCH/PUT /wishlists/1 or /wishlists/1.json
   def update
+    authorize @wishlist
     respond_to do |format|
       if @wishlist.update(wishlist_params)
         format.html do
@@ -59,6 +65,7 @@ class WishlistsController < ApplicationController
 
   # DELETE /wishlists/1 or /wishlists/1.json
   def destroy
+    authorize @wishlist
     @wishlist.destroy
 
     respond_to do |format|

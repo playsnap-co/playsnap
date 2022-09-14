@@ -3,8 +3,10 @@
 <%= render @review %>
 
 <div>
-  <%= link_to "Edit this review", edit_review_path(@review) %> |
+  <% if policy(@review).edit? %>
+    <%= link_to "Edit this review", edit_review_path(@review) %> |
+  <% end %>
   <%= link_to "Back to reviews", reviews_path %>
 
-  <%= button_to "Destroy this review", @review, method: :delete %>
+  <%= button_to "Destroy this review", @review, method: :delete if policy(@review).destroy? %>
 </div>

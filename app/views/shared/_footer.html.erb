@@ -3,29 +3,25 @@
     <div class="footer-element ">
       <%= link_to root_path do %>
         <span class="material-symbols-outlined">search</span>
-        <%# <i class="fa-solid fa-magnifying-glass"></i> %>
         <div class="footer-description">Search</div>
       <% end %>
     </div>
     <div class="footer-element">
       <%= link_to activities_path do %>
         <span class="material-symbols-outlined">dashboard</span>
-        <%# <i class="fa-solid fa-grip"></i> %>
         <div class="footer-description">Explore</div>
       <% end %>
     </div>
     <div class="footer-element">
-      <%# <%= link_to wishlist_path do %>
+      <%= link_to wishlists_path do %>
         <span class="material-symbols-outlined">bookmark</span>
-        <%# <i class="fa-regular fa-bookmark"></i> %>
         <div class="footer-description">Wishlist</div>
-      <%# <% end %>
+      <% end %>
     </div>
     <div class="footer-element">
       <%= link_to current_user ? user_path(current_user) : new_user_session_path do %>
-      <span class="material-symbols-outlined">person</span>
-      <%# <i class="fa-regular fa-user"></i> %>
-      <div class="footer-description">Profile</div>
+        <span class="material-symbols-outlined">person</span>
+        <div class="footer-description">Profile</div>
       <% end %>
     </div>
   </div>

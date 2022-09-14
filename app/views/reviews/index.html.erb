@@ -11,4 +11,4 @@
   <% end %>
 </div>
 
-<%= link_to "New review", new_review_path %>
+<%= link_to "New review", new_review_path if policy(Review).new? %>
