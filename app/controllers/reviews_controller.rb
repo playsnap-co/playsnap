@@ -6,27 +6,22 @@ class ReviewsController < ApplicationController
     @reviews = policy_scope(Review)
   end
 
-  # GET /reviews/1 or /reviews/1.json
-  def show
-    authorize @restaurant
-  end
-
   # GET /reviews/new
   def new
     @review = Review.new
-    authorize @restaurant
+    authorize @review
   end
 
   # GET /reviews/1/edit
   def edit
-    authorize @restaurant
+    authorize @review
   end
 
   # POST /reviews or /reviews.json
   def create
     @review = Review.new(review_params)
     @review.user = current_user
-    authorize @restaurant
+    authorize @review
 
     respond_to do |format|
       if @review.save
@@ -46,7 +41,7 @@ class ReviewsController < ApplicationController
 
   # PATCH/PUT /reviews/1 or /reviews/1.json
   def update
-    authorize @restaurant
+    authorize @review
     respond_to do |format|
       if @review.update(review_params)
         format.html do
@@ -65,7 +60,7 @@ class ReviewsController < ApplicationController
 
   # DELETE /reviews/1 or /reviews/1.json
   def destroy
-    authorize @restaurant
+    authorize @review
     @review.destroy
 
     respond_to do |format|

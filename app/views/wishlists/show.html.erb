@@ -3,7 +3,7 @@
 <%= render @wishlist %>
 
 <div>
-  <% if policy(@restaurant).edit? %>
+  <% if policy(@wishlist).edit? %>
     <%= link_to "Edit this wishlist", edit_wishlist_path(@wishlist) %> |
   <% end %>
   <%= link_to "Back to wishlists", wishlists_path %>
