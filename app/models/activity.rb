@@ -1,6 +1,6 @@
 class Activity < ApplicationRecord
   belongs_to :category
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   has_many :activity_items
   has_many :items, through: :activity_items
 
