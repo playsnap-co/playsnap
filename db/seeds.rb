@@ -58,7 +58,7 @@ Activity.create(
       description: "Encourage the children to work together to keep the ball up in the air.",
       object: "Ball",
       age_group: "25 - 36 mths",
-      image_url: "https://www.verywellfamily.com/old-fashioned-ball-games-for-kids-1696146",
+      image_url: "https://cdn.cdnparenting.com/articles/2022/01/21173905/27318151.jpg",
       video_url: "",
       category: social
     },
