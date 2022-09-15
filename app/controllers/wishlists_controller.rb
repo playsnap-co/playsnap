@@ -27,22 +27,20 @@ class WishlistsController < ApplicationController
 
   # POST /wishlists or /wishlists.json
   def create
-    @wishlist = Wishlist.new
-    @activity = Activity.find_by_id(params[:format])
-    @wishlist.activity = @activity
-    @wishlist.user = current_user
+    @activity = Activity.find_by_id(params[:activity_id])
+    @wishlist = Wishlist.find_by(activity: @activity, user: current_user)
+
     # authorize @wishlist
 
     respond_to do |format|
-      if @wishlist.save
-        format.html {
-          redirect_to activity_path(@activity)
-        }
-        format.json
+      if @wishlist
+        @wishlist.destroy
+        format.json { render json: { wishlist: nil } }
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json
+        @wishlist = Wishlist.create!(user: current_user, activity: @activity)
+        format.json { render json: { wishlist: @wishlist } }
       end
+      format.html { redirect_to activity_path(@activity) }
     end
   end
 

@@ -17,11 +17,10 @@
 
         <span
           data-controller="bookmark-button" data-bookmark-button-activity-id-value="<%= @activity.id %>"
-          data-bookmark-button-user-id-value="<%= current_user.id %>"
           >
           <%= button_to "",
-              "/wishlists",
-              class:"border-0 bg-transparent fa-regular fa-bookmark",
+              wishlists_path(),
+              class:"border-0 bg-transparent fa-bookmark #{@wishlist ? "fa-solid" : "fa-regular" }",
               data: {
                 action:"click->bookmark-button#send",
                 bookmark_button_target:"button"} %>
@@ -31,7 +30,7 @@
     <div class="mt-2">
       Rating: <%= @activity.average_rating %>
     </div>
-    <div class="mt-2"
+    <div class="mt-2">
       <%= @activity.description %>
     </div>
     <div class="mt-2">
