@@ -3,10 +3,7 @@ class WishlistsController < ApplicationController
 
   # GET /wishlists or /wishlists.json
   def index
-    # @wishlists = policy_scope(Wishlist)
-    # @wishlist.activity = Activity.find_by_id((params[:activity_id]))
-    # @wishlist.user = current_user
-    # redirect_to :back
+    @wishlists = current_user.wishlists.includes(:activity)
   end
 
   # GET /wishlists/1 or /wishlists/1.json
@@ -30,14 +27,14 @@ class WishlistsController < ApplicationController
     @activity = Activity.find_by_id(params[:activity_id])
     @wishlist = Wishlist.find_by(activity: @activity, user: current_user)
 
-    # authorize @wishlist
 
     respond_to do |format|
       if @wishlist
         @wishlist.destroy
         format.json { render json: { wishlist: nil } }
       else
-        @wishlist = Wishlist.create!(user: current_user, activity: @activity)
+        @wishlist = Wishlist.new(user: current_user, activity: @activity)
+        @wishlist.save
         format.json { render json: { wishlist: @wishlist } }
       end
       format.html { redirect_to activity_path(@activity) }

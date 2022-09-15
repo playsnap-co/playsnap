@@ -2,12 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="bookmark-button"
 export default class extends Controller {
-  static values = { activityId: Number}
+  static values = { activityId: Number, currentPath: String }
   static targets = ["button"]
-  connect() {
-    console.log("Test")
-  }
-
   send(event){
     event.preventDefault();
 
@@ -34,6 +30,11 @@ export default class extends Controller {
       } else {
         this.buttonTarget.classList.remove("fa-solid");
         this.buttonTarget.classList.add("fa-regular");
+        if (this.currentPathValue === "/wishlists") {
+          document
+            .querySelector(`#activity-${this.activityIdValue}`)
+            .remove();
+        }
       }
     });
   }

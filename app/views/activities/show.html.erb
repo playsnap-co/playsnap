@@ -15,16 +15,7 @@
         <span><%= button_to "", "#", class:"border-0 fa-regular fa-heart bg-transparent" %></span>
         <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
 
-        <span
-          data-controller="bookmark-button" data-bookmark-button-activity-id-value="<%= @activity.id %>"
-          >
-          <%= button_to "",
-              wishlists_path(),
-              class:"border-0 bg-transparent fa-bookmark #{@wishlist ? "fa-solid" : "fa-regular" }",
-              data: {
-                action:"click->bookmark-button#send",
-                bookmark_button_target:"button"} %>
-        </span>
+        <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
       </div>
     </div>
     <div class="mt-2">

@@ -1,2 +1,4 @@
-<div id="<%= dom_id wishlist %>">
+<div id="activity-<%= wishlist.activity.id %>">
+  <%= wishlist.activity.title %>
+  <%= render "wishlists/wishlist_button", activity: wishlist.activity, wishlist: wishlist %>
 </div>
