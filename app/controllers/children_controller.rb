@@ -8,7 +8,7 @@ class ChildrenController < ApplicationController
 
   # GET /children/1 or /children/1.json
   def show
-    # @child.user = current_user
+    @child.user = current_user
     # authorize @child
   end
 
