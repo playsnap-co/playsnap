@@ -3,50 +3,62 @@ class WishlistsController < ApplicationController
 
   # GET /wishlists or /wishlists.json
   def index
-    @wishlists = policy_scope(Wishlist)
+    # @wishlists = policy_scope(Wishlist)
+    # @wishlist.activity = Activity.find_by_id((params[:activity_id]))
+    # @wishlist.user = current_user
+    # redirect_to :back
   end
 
   # GET /wishlists/1 or /wishlists/1.json
   def show
-    authorize @wishlist
+    # authorize @wishlist
   end
 
   # GET /wishlists/new
   def new
     @wishlist = Wishlist.new
-    authorize @wishlist
+    # authorize @wishlist
   end
 
   # GET /wishlists/1/edit
   def edit
-    authorize @wishlist
+    # authorize @wishlist
   end
 
   # POST /wishlists or /wishlists.json
   def create
-    @wishlist = Wishlist.new(wishlist_params)
+    @wishlist = Wishlist.new
+    @activity = Activity.find_by_id(params[:format])
+    @wishlist.activity = @activity
     @wishlist.user = current_user
-    authorize @wishlist
+    # authorize @wishlist
 
     respond_to do |format|
       if @wishlist.save
-        format.html do
-          redirect_to wishlist_url(@wishlist),
-                      notice: "Wishlist was successfully created."
-        end
-        format.json { render :show, status: :created, location: @wishlist }
+        format.html {
+          redirect_to activity_path(@activity)
+        }
+        format.json
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json do
-          render json: @wishlist.errors, status: :unprocessable_entity
-        end
+        format.json
       end
     end
   end
 
   # PATCH/PUT /wishlists/1 or /wishlists/1.json
   def update
-    authorize @wishlist
+    # authorize @wishlist
+
+    @wishlist = Wishlist.where(activity: Activity.find(params[:activity]), user: current_user)
+    if @wishlist == []
+      Wishlist.create(activity: Activity.find(params[:activity]), user: current_user)
+      @wishlist_exists = true
+    else
+      @wishlist.destroy_all
+      @wishlist_exists = false
+    end
+
     respond_to do |format|
       if @wishlist.update(wishlist_params)
         format.html do
@@ -65,7 +77,7 @@ class WishlistsController < ApplicationController
 
   # DELETE /wishlists/1 or /wishlists/1.json
   def destroy
-    authorize @wishlist
+    # authorize @wishlist
     @wishlist.destroy
 
     respond_to do |format|
@@ -82,10 +94,5 @@ class WishlistsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_wishlist
     @wishlist = Wishlist.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
-  def wishlist_params
-    params.fetch(:wishlist, {})
   end
 end

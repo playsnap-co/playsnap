@@ -1,14 +1,34 @@
-<p style="color: green"><%= notice %></p>
+<% content_for :title do %>
+  <h1>Wishlists</h1>
+<% end %>
 
-<h1>Wishlists</h1>
 
-<div id="wishlists">
-  <% @wishlists.each do |wishlist| %>
-    <%= render wishlist %>
-    <p>
-      <%= link_to "Show this wishlist", wishlist %>
-    </p>
-  <% end %>
+<%# <div id="wishlists"> %>
+  <#% @wishlists.each do |wishlist| %>
+    <#%= #render wishlist %>
+    <%# <p> %>
+      <#%= #link_to "Show this wishlist", wishlist %>
+    <%# </p> %>
+  <#% #end %>
+<%# </div> %>
+
+<#%= link_to "New wishlist", new_wishlist_path if policy(Wishlist).new? %>
+
+
+<div class="container-display">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="container-wishlist">
+    <% if @wishlists.present? %>
+      <% @wishlists.each do |wishlist| %>
+        <%= render wishlist %>
+        <h2>
+          <%= link_to "Show this wishlist", wishlist %>
+        </h2>
+      <% end %>
+    <% else %>
+      <%= link_to "Create a wishlist", new_wishlist_path %>
+      <#%= link_to "New wishlist", new_wishlist_path if policy(Wishlist).new? %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New wishlist", new_wishlist_path if policy(Wishlist).new? %>

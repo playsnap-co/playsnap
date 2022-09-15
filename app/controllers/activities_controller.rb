@@ -24,6 +24,8 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+    @wishlist = Wishlist.new
+    @wishlist_exists = !(Wishlist.where(activity: @activity, user: current_user) == [])
   end
 
   def edit
