@@ -28,7 +28,7 @@
           <div class="profile-text">Completed Activities</div>
           <% end %>
 
-        <%# auto swipe left carousel %>
+        <%# with indicators carousel %>
         <div id="completedActivities" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#completedActivities" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -37,13 +37,13 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="https://3.bp.blogspot.com/-hC0NM37SVFU/V8bHRi6XZjI/AAAAAAAAX5A/yv2J-S929TQUPWQrRLzoN7zfMQYtHb0FwCLcB/s640/IMG_3259.JPG" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="https://images.squarespace-cdn.com/content/v1/5d45a91328f0880001bbe424/1566872221166-A36JCBSW0D23F1RH5CUA/pongcup_1.jpg?format=1000w" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="https://1.bp.blogspot.com/-pDKCKBeSz-A/XzZ6Qt7hVoI/AAAAAAAAcM8/EM87qxUOvYUpcM2fH7KdxjRTETFelNL_gCLcBGAsYHQ/s2048/IMG_4278.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#completedActivities" data-bs-slide="prev">
@@ -68,3 +68,35 @@
   <%# <%= button_to "Destroy this child", @child, method: :delete if policy(@child).destroy? %>
 <%# </div> %>
 <%#  %>
+
+<%# to input these activities 0 - 12 mths%>
+<%# {
+    title:"Where Are We Going?",
+    description: "Lay out a towel on the floor and have your
+    toddler sit on it, gently pull them around the room. Pretend the towel
+    is a train or a boat and that you are stopping at different places,
+    like the zoo, the grocery store, or a favorite restaurant.",
+    age_group: "0 - 12 mths",
+    image_url: "https://3.bp.blogspot.com/-hC0NM37SVFU/V8bHRi6XZjI/AAAAAAAAX5A/yv2J-S929TQUPWQrRLzoN7zfMQYtHb0FwCLcB/s640/IMG_3259.JPG",
+    video_url: "",
+    category: gross_motor
+  } %>
+
+  <%# {
+    title: "Ping Pong Throw",
+    description: "Throw the ping pong ball into the container.",
+    age_group: "0 - 12 mths",
+    image_url: "https://images.squarespace-cdn.com/content/v1/5d45a91328f0880001bbe424/1566872221166-A36JCBSW0D23F1RH5CUA/pongcup_1.jpg?format=1000w",
+    video_url:"",
+    category: fine_motor
+  } %>
+
+  <%# {
+      title: "Texture Exploring",
+      description: "Let your child explore different textures around them. You may
+      also input opposites such as 'hard' or 'soft', 'smooth' or 'rough'.",
+      age_group: "0 - 12 mths",
+      image_url: "https://1.bp.blogspot.com/-pDKCKBeSz-A/XzZ6Qt7hVoI/AAAAAAAAcM8/EM87qxUOvYUpcM2fH7KdxjRTETFelNL_gCLcBGAsYHQ/s2048/IMG_4278.jpg",
+      video_url: "",
+      category: cognitive
+    } %>
