@@ -4,7 +4,7 @@
   data-bookmark-button-current-path-value="<%= request.path %>"
   >
   <%= button_to "",
-      wishlists_path(),
+      wishlists_path(activity_id: activity.id),
       class:"border-0 bg-transparent fa-bookmark #{wishlist ? "fa-solid" : "fa-regular" }",
       data: {
         action:"click->bookmark-button#send",

@@ -1,5 +1,5 @@
 <% content_for :title do %>
-  <h3>Wishlists</h3>
+  <h3>Wishlist</h3>
 <% end %>
 
 <div class="container-display">
@@ -7,12 +7,17 @@
 
   <div class="container-wishlist">
     <% if @wishlists.present? %>
+      <h4>Here are your saved activities:</h4>
       <% @wishlists.each do |wishlist| %>
         <%= render "wishlist", wishlist: wishlist %>
       <% end %>
+      <%= link_to "Add Activities", activities_path %>
     <% else %>
-      <%= link_to "Create a wishlist", new_wishlist_path %>
-      <%# link_to "New wishlist", new_wishlist_path if policy(Wishlist).new? %>
+      <p>Looks empty for now..</p>
+      <p>Simply tap on the bookmark icon
+        <i class="fa-regular fa-bookmark"></i>
+        when browsing activities to fill this list up!</p>
+      <%= link_to "Get Started", activities_path %>
     <% end %>
   </div>
 </div>
