@@ -2,8 +2,6 @@
   <h1>Profile</h1>
 <% end %>
 
-
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12.col-sm-3.col-sm-offset">
@@ -14,7 +12,7 @@
           <br>
           <%= render @child %>
           <div>
-            <%= @child.name %>
+            <%= @child.name %> <span class="material-symbols-outlined">edit</span>
           </div>
           <br>
 
@@ -30,22 +28,12 @@
           <div class="profile-text">Completed Activities</div>
           <% end %>
 
-
-          # <%# <% @resource.children.each do |child| %>
-          # <%# <%= link_to child_path(child) do %>
-          # <%# <div class="profile-card mb-3">
-          #   <div class ="yellow-box"></div>
-          #   <%# <div class="profile-text"><%= "#{child.name}'s profile" %>
-        #     <%# </div>
-        #   </div>
-        #   <% end %>
-        # <%# <% end %>
-
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <%# auto swipe left carousel %>
+        <div id="completedActivities" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#completedActivities" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#completedActivities" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#completedActivities" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -58,20 +46,20 @@
               <img src="..." class="d-block w-100" alt="...">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#completedActivities" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#completedActivities" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-
-      </div>
+        </div>
     </div>
   </div>
 <div>
+
   <%# <% if policy(@child).edit? %>
     <%# <%= link_to "Edit this child", edit_child_path(@child) %>
   <%# <% end %>
