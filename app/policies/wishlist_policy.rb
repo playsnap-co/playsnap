@@ -2,7 +2,7 @@ class WishlistPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       # scope.all # If users can see all wishlists
-      scope.where(user: user) # If users can only see their wishlists
+      scope.where(user:) # If users can only see their wishlists
       # scope.where("name LIKE 't%'") # If users can only see wishlists starting with `t`
       # ...
     end

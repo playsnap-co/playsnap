@@ -2,7 +2,7 @@ class ChildPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       # scope.all # If users can see all children
-      scope.where(user: user) # If users can only see their children
+      scope.where(user:) # If users can only see their children
       # scope.where("name LIKE 't%'") # If users can only see children starting with `t`
       # ...
     end
