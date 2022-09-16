@@ -1,2 +1,11 @@
-<div id="<%= dom_id wishlist %>">
+<div class="activity-card" id="activity-<%= wishlist.activity.id %>">
+  <div class="thumbnail">
+    <%= image_tag wishlist.activity.image_url %>
+  </div>
+  <div class="activity-card-info">
+    <%= link_to "#{wishlist.activity.title}", activity_path(wishlist.activity.id) %>
+  </div>
+  <div class="icon">
+    <%= render "wishlists/wishlist_button", activity: wishlist.activity, wishlist: wishlist %>
+  </div>
 </div>

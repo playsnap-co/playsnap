@@ -1,14 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<% content_for :title do %>
+  <h1>Wishlists</h1>
+<% end %>
 
-<h1>Wishlists</h1>
+<div class="container-display">
+  <p style="color: green"><%= notice %></p>
 
-<div id="wishlists">
-  <% @wishlists.each do |wishlist| %>
-    <%= render wishlist %>
-    <p>
-      <%= link_to "Show this wishlist", wishlist %>
-    </p>
-  <% end %>
+  <div class="container-wishlist">
+    <% if @wishlists.present? %>
+      <h4>Here are your saved activities:</h4>
+      <% @wishlists.each do |wishlist| %>
+        <%= render "wishlist", wishlist: wishlist %>
+      <% end %>
+      <%= link_to "Add Activities", activities_path %>
+    <% else %>
+      <p>Looks empty for now..</p>
+      <p>Simply tap on the bookmark icon
+        <i class="fa-regular fa-bookmark"></i>
+        when browsing activities to fill this list up!</p>
+      <%= link_to "Get Started", activities_path %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New wishlist", new_wishlist_path if policy(Wishlist).new? %>

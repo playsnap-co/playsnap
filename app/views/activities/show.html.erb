@@ -14,7 +14,8 @@
       <div class="d-flex">
         <span><%= button_to "", "#", class:"border-0 fa-regular fa-heart bg-transparent" %></span>
         <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
-        <span><%= button_to "", "#", class:"border-0 fa-regular fa-bookmark bg-transparent" %></span>
+
+        <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
       </div>
     </div>
     <div class="mt-2">
