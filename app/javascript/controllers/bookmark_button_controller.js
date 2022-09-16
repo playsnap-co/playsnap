@@ -11,12 +11,22 @@ export default class extends Controller {
       .querySelector('meta[name="csrf-token"]')
       .getAttribute("content");
 
-    fetch("/wishlists", {
+    // fetch("/wishlists", {
+    //   method: "POST",
+    //   headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //     "X-CSRF-Token": csrfToken,
+    //   },
+    //   body: JSON.stringify({
+    //     activity_id: this.activityIdValue,
+    //   }),
+    // })
+    fetch(this.buttonTarget.action, {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        "X-CSRF-Token": csrfToken,
       },
       body: JSON.stringify({
         activity_id: this.activityIdValue,
