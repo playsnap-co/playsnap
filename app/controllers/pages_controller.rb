@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     if params[:query].present?
       sql_query = "name ILIKE :query"
 
-      @items = Item.where(sql_query, query: "%#{params[:query]}%")
+      @items = Item.where(sql_query, query: "#{params[:query]}%").first(5)
 
     end
     respond_to do |format|

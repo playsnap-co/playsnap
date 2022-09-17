@@ -16,3 +16,62 @@
     color: $dark-gray;
   }
 }
+
+.homepage h1 {
+  margin-bottom: 25px;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+}
+.autocomplete-items div {
+  cursor: pointer;
+  background-color: #DAECF0;
+  color: #717b83;
+  // border-bottom: 1px solid #D4D4D4;
+  border-left: 1px solid #ced4da;
+  border-right: 1px solid #ced4da;
+}
+.autocomplete-items {
+
+  position: absolute;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #039dfc;
+  color: white;
+}
+
+.dropdown-item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+}
+
+.dropdown-item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 1px solid #ced4da;
+}
+
+.dropdown-item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid #ced4da;
+}
+
+#query.form-control {
+  font-size: 20px;
+  height: 48px;
+}
