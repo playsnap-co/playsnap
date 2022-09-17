@@ -9,21 +9,21 @@
     <div class="col-xs-12.col-sm-3.col-sm-offset-4">
       <div class="homepage" data-controller="autocomplete">
 
-        <h4>Independent play activities with ANYTHING you have on hand, in a snap!</h4>
+        <h1>Independent play activities with ANYTHING you have on hand, in a snap!</h1>
         <label for="objectToSearch" class="form-label">I have</label>
         <%= form_with url: activities_path,
                       method: :get, html:
                       {class: "mb-3", data: {autocomplete_target: "form"}} do |f| %>
+         <div class="autocomplete">
           <%= f.text_field :query,
                             class: "form-control",
                             placeholder: "Object",
                             required: true,
                             data: {autocomplete_target: "input",
                             action: "keyup->autocomplete#update"} %>
-          <div data-autocomplete-target="list"></div>
-
-
-
+          <div class="autocomplete-items" data-autocomplete-target="list"> </div>
+          </div>
+          <br>
           <label for="ageRange" class="form-label">for</label>
           <%= f.select(:age_group, [["Select age group",""],"0 - 12 mths", "13 - 24mths", "25 - 36 mths"], {}, {class: "form-select form-select-lg mb-3"}) %>
 
