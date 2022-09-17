@@ -1,0 +1,23 @@
+.child-profile {
+  padding: 20px 40px 20px 40px;
+
+    .child-name {
+      font-size: 24px;
+    }
+
+    .child-details {
+      font-size: 18px;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .form-label {
+      font-size: 18px;
+    }
+
+    .frame img {
+        height: 200px;
+        width: auto;
+        object-fit: cover;
+      }
+  }

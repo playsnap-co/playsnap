@@ -8,7 +8,7 @@ class ChildrenController < ApplicationController
 
   # GET /children/1 or /children/1.json
   def show
-    # @child.user = current_user
+    @child.user = current_user
     # authorize @child
   end
 
@@ -30,7 +30,7 @@ class ChildrenController < ApplicationController
     # authorize @child
 
     respond_to do |format|
-      if @child.save
+      if @child.save!
         format.html do
           redirect_to child_url(@child),
                       notice: "Child was successfully created."

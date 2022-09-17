@@ -1,9 +1,37 @@
-<h1>New child</h1>
+<% content_for :title do %>
+  <h1>Add Child Profile</h1>
+<% end %>
 
-<%= render "form", child: @child %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12.col-sm-3.col-sm-offset">
+      <div class="child-profile">
 
-<br>
+        <div class="child-avatar text-center"> <%# to find ways to upload avatar %>
+          <%= image_tag("child_avatar.png", style: "width: 100px") %>
+        </div>
 
-<div>
-  <%= link_to "Back to children", children_path %>
+        <label for="name" class="form-label"></label>
+        <%= simple_form_for @child, method: :post do |f| %>
+          <div class="form-inputs mb-5">
+              <%= f.input :name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "name" },
+                          placeholder: "Enter name" %>
+
+              <label for="age" class="form-label">Age</label>
+              <%= f.select(:age, [["Select age",""],"0 - 12 mths", "13 - 24mths", "25 - 36 mths"], {}, {required: true, class: "form-select form-select"}) %>
+
+            <label for="gender" class="form-label"></label>
+            <%= f.input :gender, as: :select, collection: ['boy', 'girl'], required: true %>
+
+            <div class="form-actions text-center">
+              <%= f.button :submit, "Save", class:"btn btn-primary btn-action" %>
+            </div>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
 </div>
