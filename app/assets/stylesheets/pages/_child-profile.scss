@@ -14,4 +14,10 @@
     .form-label {
       font-size: 18px;
     }
+
+    .frame img {
+        height: 200px;
+        width: auto;
+        object-fit: cover;
+      }
   }
