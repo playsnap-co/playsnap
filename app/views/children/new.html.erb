@@ -1,18 +1,17 @@
 <% content_for :title do %>
-  <h1>Add Profile</h1>
+  <h1>Add Child Profile</h1>
 <% end %>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12.col-sm-3.col-sm-offset">
-      <div class="add-child-profile">
+      <div class="child-profile">
 
         <div class="child-avatar text-center"> <%# to find ways to upload avatar %>
           <%= image_tag("child_avatar.png", style: "width: 100px") %>
         </div>
-        <br>
 
-        <label for="name" class="form-label">Child's Name</label>
+        <label for="name" class="form-label"></label>
         <%= simple_form_for @child, method: :post do |f| %>
           <div class="form-inputs mb-5">
               <%= f.input :name,
@@ -22,7 +21,7 @@
                           placeholder: "Enter name" %>
 
               <label for="age" class="form-label">Age</label>
-              <%= f.select(:age, [["Select age",""],"0 - 12 mths", "13 - 24mths", "25 - 36 mths"], {}, {required: true, class: "form-select form-select-lg mb-3"}) %>
+              <%= f.select(:age, [["Select age",""],"0 - 12 mths", "13 - 24mths", "25 - 36 mths"], {}, {required: true, class: "form-select form-select"}) %>
 
             <label for="gender" class="form-label"></label>
             <%= f.input :gender, as: :select, collection: ['boy', 'girl'], required: true %>

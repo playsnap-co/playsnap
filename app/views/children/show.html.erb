@@ -5,25 +5,25 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12.col-sm-3.col-sm-offset">
-      <div class="profile text-center">
+      <div class="child-profile text-center">
 
            <%= image_tag("child_avatar.png", style: "width: 100px") %>
           <br>
           <br>
           <%= render @child %>
-          <div>
+          <div class="child-name">
             <%= @child.name %> <span class="material-symbols-outlined">edit</span>
           </div>
           <br>
 
-          <div class="profile">
+          <div class="child-details">
             Age: <%= @child.age %>
           </div>
-          <div class="profile">
+          <div class="child-details">
             Gender: <%= @child.gender %>
           </div>
 
-          <div class="profile">
+          <div class="child-details">
           <%= link_to activity_path do %>
           <div class="profile-text">Completed Activities</div>
           <% end %>
