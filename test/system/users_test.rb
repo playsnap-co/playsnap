@@ -5,7 +5,7 @@ class UsersTest < ApplicationSystemTestCase
     visit root_url
 
     assert_selector "video", class: "playsnap_video"
-    assert_selector "h4", text: "Independent play activities with ANYTHING you have on hand, in a snap!"
+    assert_selector "h1", text: "Independent play activities with ANYTHING you have on hand, in a snap!"
   end
 
   test "visiting the user profile page" do
