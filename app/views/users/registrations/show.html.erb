@@ -13,7 +13,7 @@
         <%= link_to edit_user_path(@resource) do %>
           <div class="profile-card mb-3">
             <div class ="purple-box"></div>
-            <div class="profile-text"><strong><%= "#{@resource.username}" %></strong></div>
+            <div class="profile-text"><strong><%= "#{@resource.username.capitalize}" %></strong></div>
           </div>
         <% end %>
 
@@ -21,7 +21,7 @@
           <%= link_to child_path(child) do %>
           <div class="profile-card mb-3">
             <div class ="yellow-box"></div>
-            <div class="profile-text"><%= "#{child.name}'s profile" %></div>
+            <div class="profile-text"><%= "#{child.name.capitalize}'s profile" %></div>
           </div>
           <% end %>
         <% end %>

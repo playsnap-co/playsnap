@@ -12,15 +12,15 @@
           <br>
           <%= render @child %>
           <div class="child-name">
-            <%= @child.name %> <span class="material-symbols-outlined">edit</span>
+            <%= @child.name.capitalize %> <span class="material-symbols-outlined">edit</span>
           </div>
           <br>
 
           <div class="child-details">
-            Age: <%= @child.age %>
+            Age: <%= @child.age %> mths
           </div>
           <div class="child-details">
-            Gender: <%= @child.gender %>
+            Gender: <%= @child.gender.capitalize %>
           </div>
 
           <div class="child-details">
