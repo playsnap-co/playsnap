@@ -4,7 +4,8 @@ class UsersTest < ApplicationSystemTestCase
   test "visiting the home page" do
     visit root_url
 
-    assert_selector "video", class: "playsnap_video"
+    # assert_selector "video", class: "playsnap_video"
+    # playsnap_video class not necessary after refining
     assert_selector "h1", text: "Independent play activities with ANYTHING you have on hand, in a snap!"
   end
 

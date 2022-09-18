@@ -1,10 +1,18 @@
 .homepage{
-  padding: 20px 40px 20px 40px;
-  font-size: x-large;
+  padding: 25px 20px;
+  // font-size: x-large;
+}
+
+.form-label {
+  font-size: 18px;
+  margin: 15px 0px 5px 10px;
+  font: $headers-font;
 }
 
 .form-select {
   border-radius: 20px;
+  background-color: $light-blue;
+  color: $pale-gray;
 }
 
 .form-control {
@@ -12,7 +20,7 @@
   background-color: $light-blue;
 }
 
-.form-select {
-  background-color: $light-blue;
-  color: $pale-gray;
+ .btn {
+  font-size: 18px;
+  font-weight: 300;
 }
