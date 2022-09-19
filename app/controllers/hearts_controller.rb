@@ -24,8 +24,6 @@ class HeartsController < ApplicationController
     @activity = Activity.find_by_id(params[:activity_id])
     @heart = Heart.find_by(activity: @activity, user: current_user)
 
-      puts "hello"
-
     respond_to do |format|
       if @heart
         @heart.destroy
