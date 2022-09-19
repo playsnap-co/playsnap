@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :children, dependent: :destroy
   has_many :wishlists
   has_many :activities, through: :wishlists
+  has_many :hearts
+  has_many :activities, through: :hearts
 end

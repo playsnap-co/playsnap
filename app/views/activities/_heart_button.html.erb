@@ -1,0 +1,11 @@
+ <span
+  data-controller="heart-button"
+  data-heart-button-activity-id-value="<%= activity.id %>"
+  >
+  <%= button_to "",
+      hearts_path(activity_id: activity.id),
+      class:"border-0 bg-transparent fa-heart #{heart ? "fa-solid" : "fa-regular" }",
+      data: {
+        action:"click->heart-button#send",
+        heart_button_target:"button"} %>
+</span>
