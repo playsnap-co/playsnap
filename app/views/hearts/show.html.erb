@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @heart %>
+
+<div>
+  <%= link_to "Edit this heart", edit_heart_path(@heart) %> |
+  <%= link_to "Back to hearts", hearts_path %>
+
+  <%= button_to "Destroy this heart", @heart, method: :delete %>
+</div>

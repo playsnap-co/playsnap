@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Hearts</h1>
+
+<div id="hearts">
+  <% @hearts.each do |heart| %>
+    <%= render heart %>
+    <p>
+      <%= link_to "Show this heart", heart %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New heart", new_heart_path %>

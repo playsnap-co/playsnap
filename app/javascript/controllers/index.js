@@ -12,3 +12,6 @@ application.register("bookmark-button", BookmarkButtonController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import HeartButtonController from "./heart_button_controller"
+application.register("heart-button", HeartButtonController)
