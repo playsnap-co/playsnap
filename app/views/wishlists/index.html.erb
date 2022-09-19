@@ -2,22 +2,27 @@
   <h1>Wishlists</h1>
 <% end %>
 
-<div class="container-display">
-  <p style="color: green"><%= notice %></p>
-
-  <div class="container-wishlist">
-    <% if @wishlists.present? %>
-      <h4>Here are your saved activities:</h4>
-      <% @wishlists.each do |wishlist| %>
-        <%= render "wishlist", wishlist: wishlist %>
-      <% end %>
-      <%= link_to "Add Activities", activities_path %>
-    <% else %>
-      <p>Looks empty for now..</p>
-      <p>Simply tap on the bookmark icon
-        <i class="fa-regular fa-bookmark"></i>
-        when browsing activities to fill this list up!</p>
-      <%= link_to "Get Started", activities_path %>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12.col-sm-3.col-sm-offset-4">
+      <p style="color: green"><%= notice %></p>
+      <div class="page-container">
+        <% if @wishlists.present? %>
+          <h2 class="mb-3">Here are your saved activities:</h2>
+          <% @wishlists.each do |wishlist| %>
+            <%= render "wishlist", wishlist: wishlist %>
+          <% end %>
+          <h3 class="mt-3 d-grid gap-2 d-md-block">
+          <%= link_to "Add Activities", activities_path, class:"mt-3 btn btn-primary d-grid gap-2 d-md-block" %>
+          </h3>
+        <% else %>
+          <h2>Looks empty for now..</h2>
+          <h2 class="lh-lg">Simply tap on the bookmark icon&nbsp;
+            <i class="fa-regular fa-bookmark"></i>&nbsp;
+            when browsing activities to fill this list up!</h2>
+          <%= link_to "Get Started", activities_path, class:"mt-3 btn btn-primary d-grid gap-2 d-md-block" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
