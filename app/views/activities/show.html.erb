@@ -12,10 +12,10 @@
     <div class="mt-2 d-flex justify-content-between activity-title">
       <span><%= @activity.title %></span>
       <div class="d-flex">
-        <span><%= button_to "", "#", class:"border-0 fa-regular fa-heart bg-transparent" %></span>
         <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
 
         <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
+        <%= render "heart_button", activity: @activity, heart: @heart %>
       </div>
     </div>
     <div class="mt-2">
