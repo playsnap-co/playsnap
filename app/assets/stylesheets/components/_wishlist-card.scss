@@ -1,0 +1,39 @@
+.wishlist-card {
+  overflow: hidden;
+  height: 100px;
+  width: auto;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 12px 0px;
+  font: $headers-font;
+  justify-content: flex-start;
+
+  .thumbnail img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .wishlist-card-info {
+    font-size: 24px;
+    font-weight: bold;
+    width: auto;
+    margin: 0;
+    padding: 7px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .icon {
+    margin-left: auto;
+    padding: 7px;
+    font-size: 28px;
+    opacity: 0.5;
+  }
+
+}
