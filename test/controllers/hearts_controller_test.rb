@@ -10,10 +10,10 @@ class HeartsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_heart_url
-    assert_response :success
-  end
+  # test "should get new" do
+  #   get new_heart_url
+  #   assert_response :success
+  # end
 
   test "should create heart" do
     assert_difference("Heart.count") do
