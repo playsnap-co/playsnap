@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   end
 
   def design
+    # testing
   end
 
   def about_playsnap
