@@ -9,6 +9,7 @@ class ActivitiesController < ApplicationController
     if params[:query].present?
       @activities = Activity.joins(activity_items: :item).where(sql_query.join(" AND "))
       if @activities.empty?
+         @noresults = "No matching results, search again!"
          @activities = Activity.all
       end
     else
