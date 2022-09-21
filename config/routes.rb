@@ -9,8 +9,7 @@ Rails.application.routes.draw do
 
   resources :children
   resources :wishlists
-  resources :reviews
-  # resources :reviews, only: :destroy
+  resources :reviews, only: :destroy
 
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -21,7 +20,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :activities, only: %i[index show edit] do
-    resources :reviews
-    # resources :reviews, except: %i[destroy]
+    resources :reviews, except: %i[destroy]
   end
 end

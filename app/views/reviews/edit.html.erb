@@ -1,9 +1,14 @@
-<h1>Edit Review</h1>
+<% content_for :title do %>
+  <h1>Edit Review</h1>
+<% end %>
 
-<%= render "form", activity: @activity, review: @review %>
-
-<br>
-
-<div>
-  <%= link_to "Back to activity", activity_path(@activity) %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= render "form", activity: @activity, review: @review %>
+      <div class="text-center mt-5">
+        <%= link_to "Back to activity", activity_path(@activity) %>
+      </div>
+    </div>
+  </div>
 </div>

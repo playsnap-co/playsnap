@@ -2,11 +2,10 @@
   <div class="row">
     <div class="col-xs-4">
         <%= simple_form_for([activity, review]) do |f| %>
-          <%= f.input :content, placeholder: "Your comments" %>
-          <%= f.input :rating, prompt: "Ratings", collection: (1..5).to_a, label: "Rate your experience", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %>
-          <%# hidden_field_tag 'user_id', @current_user.id %>
+          <%= f.input :content, label: "Review", placeholder: "Your comments" %>
+          <%= f.input :rating, prompt: "Ratings", collection: (1..5).to_a, label: "Rate this activity", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"}, class:"stars" }  %>
           <%= f.hidden_field :user_id, value: current_user.id %>
-          <div class="text-center">
+          <div class="text-center mt-5">
             <%= f.submit "Submit", class:"btn btn-primary btn-action text-center" %>
           </div>
         <% end %>

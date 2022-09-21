@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_activity, only: %i[show index new create]
+  before_action :set_activity, only: %i[new create edit]
   before_action :set_review, only: %i[show edit update destroy]
 
   # GET /reviews or /reviews.json
@@ -39,7 +39,7 @@ class ReviewsController < ApplicationController
     respond_to do |format|
       if @review.save!
         format.html do
-          redirect_to activity_reviews_path(@activity, @review),
+          redirect_to activity_path(@activity),
                       notice: "Review was successfully created."
         end
         format.json { render :show, status: :created, location: @review }
@@ -76,12 +76,12 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1 or /reviews/1.json
   def destroy
     # authorize @review
-    # @review = @current_user.reviews.find(params[:id])
     @review.destroy!
+    @activity = @review.activity
 
     respond_to do |format|
       format.html do
-        redirect_to activity_reviews_url, notice: "Review was successfully destroyed."
+        redirect_to activity_reviews_path(@activity), notice: "Review was successfully destroyed."
       end
       format.json { head :no_content }
     end

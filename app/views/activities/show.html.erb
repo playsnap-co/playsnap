@@ -2,48 +2,51 @@
   <h1>Explore</h1>
 <% end %>
 
-<div class="activity">
-  <%= image_tag(@activity.image_url, class:"w-100 activity-image") %>
-  <div class="container mb-5">
-    <div class="mt-3">
-      <span class="badge rounded-pill bg-info text-dark"><%= @activity.age_group %></span>
-      <span class="badge rounded-pill bg-info text-dark"><%= @activity.category.name.titleize %></span>
-    </div>
-    <div class="mt-4 d-flex justify-content-between activity-title">
-      <h2><%= @activity.title %></h2>
-      <div class="d-flex">
-        <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
+<div class="container">
+  <div class="row">
+    <%= image_tag(@activity.image_url, class:"w-100 activity-image g-0") %>
+    <div class="col">
+      <div class="page-container">
+        <span class="badge rounded-pill bg-info text-dark"><%= @activity.age_group %></span>
+        <span class="badge rounded-pill bg-info text-dark"><%= @activity.category.name.titleize %></span>
+        <div class="mt-4 d-flex justify-content-between activity-title">
+          <h2><%= @activity.title %></h2>
+          <div class="d-flex">
+            <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
 
-        <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
-        <%= render "heart_button", activity: @activity, heart: @heart %>
-      </div>
-    </div>
-    <div>
-      Average rating: <%= @activity.average_rating %>
-    </div>
-    <div class="mt-3">
-      <h4>Description:</h4>
-      <%= @activity.description %>
-    </div>
-    <div class="mt-3">
-      <h4 class=>Reviews:</h4>
-        <% if @activity.reviews.count > 0 %>
-          <% @activity.reviews.each do |review| %>
-            <p><%= review.user.username.capitalize %>: <%= review.content %> (Rating: <%= review.rating %>)</p>
-              <%# if @activity.reviews.count > 3 %>
-                <%# how to show more/all? %>
-              <%# end %>
-            <% if review.user_id == current_user.id %>
-              <%= link_to "Edit", edit_activity_review_path(@activity, review.id)  %>
-              <%= link_to "Delete", activity_review_path(@activity, review.id), method: :delete, data: { confirm: 'Delete review?' } %>
-              <%# delete not working %>
+            <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
+            <%= render "heart_button", activity: @activity, heart: @heart %>
+          </div>
+        </div>
+        <div class="mt-3">
+          <em>Average rating: <%= @activity.average_rating %></em>
+        </div>
+        <div class="mt-3">
+          <h4>Description:</h4>
+          <%= @activity.description %>
+        </div>
+        <div class="mt-3">
+          <h4 class=>Reviews:</h4>
+            <% if @activity.reviews.count > 0 %>
+              <% @activity.reviews.each do |review| %>
+                <p><strong><%= review.user.username.capitalize %></strong>: <%= review.content %> (Rating: <%= review.rating %>)</p>
+                  <%# if @activity.reviews.count > 3 %>
+                    <%# how to show more/all? %>
+                  <%# end %>
+                <% if review.user_id == current_user.id %>
+                  <%= link_to "Edit", edit_activity_review_path(@activity, review.id)  %>
+                  <%= link_to "Delete", review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Delete review?' } %>
+                <% end %>
+              <% end %>
+            <% else %>
+              <p>No reviews yet.</p>
             <% end %>
-          <% end %>
-        <% else %>
-          <p>No reviews yet.</p>
-        <% end %>
-      <h4>What do you think of this activity?</h4>
-        <%= render "reviews/form", activity: @activity, review: @activity.reviews.new, user: @activity.users %>
+          <div class="mt-3">
+            <h4>Share your thoughts with others!</h4>
+            <%= render "reviews/form", activity: @activity, review: @activity.reviews.new, user: @activity.users %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
