@@ -12,8 +12,7 @@
         <div class="mt-4 d-flex justify-content-between activity-title">
           <h2><%= @activity.title %></h2>
           <div class="d-flex">
-            <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
-
+            <%= render "share_button" %>
             <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
             <%= render "heart_button", activity: @activity, heart: @heart %>
           </div>

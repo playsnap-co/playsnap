@@ -7,9 +7,12 @@ class ActivitiesController < ApplicationController
     sql_query << "category_id = #{params[:category_id]}" if params[:category_id].present?
 
     if params[:query].present?
-      @activities = Activity.joins(activity_items: :item).where(sql_query.join(" AND ")).sample(18)
+      @activities = Activity.joins(activity_items: :item).where(sql_query.join(" AND "))
+      if @activities.empty?
+         @activities = Activity.all
+      end
     else
-      @activities = Activity.where(sql_query.join(" AND ")).sample(18)
+      @activities = Activity.where(sql_query.join(" AND "))
     end
 
     @category = Category.find(params[:category_id]).name if params[:category_id].present?

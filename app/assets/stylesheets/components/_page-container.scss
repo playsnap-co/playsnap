@@ -3,12 +3,17 @@
   margin-bottom: 60px;
 
   .fa-solid {
-    color: $purple;
+    color: $dark-gray;
     padding: 8px;
   }
 
   .fa-regular {
-    color: $purple;
+    color: $dark-gray;
+    padding: 8px;
+  }
+
+  .fa-share {
+    color: $dark-gray;
     padding: 8px;
   }
 }
