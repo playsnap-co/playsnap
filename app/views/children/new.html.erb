@@ -7,9 +7,35 @@
     <div class="col-xs-12.col-sm-3.col-sm-offset">
       <div class="child-profile">
 
-        <div class="child-avatar text-center"> <%# to find ways to upload avatar %>
-          <%= image_tag("child_avatar.png", style: "width: 100px") %>
-        </div>
+      <%= simple_form_for(@child, url: new_child_path, data: { turbo: :false }) do |f| %>
+          <%= f.error_notification %>
+          <div class="text-center">
+            <%= render 'shared/avatar',
+              size: "bordered",
+              pointer: true,
+              data: {
+                "image-preview-target": "output",
+                action: "click->image-preview#uploadFile"
+              }
+            %>
+            <div class="mt-2 mb-3">
+              <button type="button" class="btn btn-outline-mybnb btn-sm" data-action="click->image-preview#uploadFile">
+                Upload a Photo
+              </button>
+            </div>
+          </div>
+          <%= f.input :photo,
+                      label: false,
+                      required: true,
+                      as: :file,
+                      input_html: {
+                        class: "d-none",
+                        data: {
+                          "image-preview-target": "input",
+                          action: "image-preview#readURL"
+                        }
+                      } %>
+          <% end %>
 
         <label for="name" class="form-label"></label>
         <%= simple_form_for @child, method: :post do |f| %>
