@@ -1,6 +1,6 @@
 
 <% content_for :title do %>
-  <h3>Try these out!</h3>
+  <h1>Try these out!</h1>
 <% end %>
 <div class="container explorecard">
   <div class="embed-responsive embed-responsive-16by9">
@@ -13,11 +13,12 @@
     <% end %>
   <br>
   <br>
+  <h2><%= @noresults %></h2>
   <div class="row explorecard">
           <div class="gallery">
             <% activity_gallery = @activities.each_slice(18).to_a%>
-            <% activity_gallery.each do |activities|%>
-            <% if activities[0].present? %>
+                <% activity_gallery.each do |activities|%>
+                <% if activities[0].present? %>
                 <figure class="gallery__item gallery__item--1">
                 <%= link_to activities[0] do %>
                 <%= image_tag(activities[0].image_url, class: "gallery__img card-img explore") %>
