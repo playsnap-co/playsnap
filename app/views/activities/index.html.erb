@@ -15,96 +15,135 @@
   <br>
   <div class="row explorecard">
           <div class="gallery">
-            <figure class="gallery__item gallery__item--1">
-            <%= link_to @activities[0] do %>
-              <%= image_tag(@activities[0].image_url, class: "gallery__img card-img explore") %>
+            <% activity_gallery = @activities.each_slice(18).to_a%>
+            <% activity_gallery.each do |activities|%>
+            <% if activities[0].present? %>
+                <figure class="gallery__item gallery__item--1">
+                <%= link_to activities[0] do %>
+                <%= image_tag(activities[0].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[1].present? %>
+                <figure class="gallery__item gallery__item--2">
+                <%= link_to activities[1] do %>
+                <%= image_tag(activities[1].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[2].present? %>
+                <figure class="gallery__item gallery__item--3">
+                <%= link_to activities[2] do %>
+                <%= image_tag(activities[2].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[3].present? %>
+                <figure class="gallery__item gallery__item--4">
+                <%= link_to activities[3] do %>
+                <%= image_tag(activities[3].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[4].present? %>
+                <figure class="gallery__item gallery__item--5">
+                <%= link_to activities[4] do %>
+                <%= image_tag(activities[4].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[5].present? %>
+                <figure class="gallery__item gallery__item--6">
+                <%= link_to activities[5] do %>
+                <%= image_tag(activities[5].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[6].present? %>
+                <figure class="gallery__item gallery__item--7">
+                <%= link_to activities[6] do %>
+                <%= image_tag(activities[6].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[7].present? %>
+                <figure class="gallery__item gallery__item--8">
+                <%= link_to activities[7] do %>
+                <%= image_tag(activities[7].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[8].present? %>
+                <figure class="gallery__item gallery__item--9">
+                <%= link_to activities[8] do %>
+                <%= image_tag(activities[8].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[9].present? %>
+                <figure class="gallery__item gallery__item--10">
+                <%= link_to activities[9] do %>
+                <%= image_tag(activities[9].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[10].present? %>
+                <figure class="gallery__item gallery__item--11">
+                <%= link_to activities[10] do %>
+                <%= image_tag(activities[10].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[11].present? %>
+                <figure class="gallery__item gallery__item--12">
+                <%= link_to activities[11] do %>
+                <%= image_tag(activities[11].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[12].present? %>
+                <figure class="gallery__item gallery__item--13">
+                <%= link_to activities[12] do %>
+                <%= image_tag(activities[12].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[13].present? %>
+                <figure class="gallery__item gallery__item--14">
+                <%= link_to activities[13] do %>
+                <%= image_tag(activities[13].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[14].present? %>
+                <figure class="gallery__item gallery__item--15">
+                <%= link_to activities[14] do %>
+                <%= image_tag(activities[14].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[15].present? %>
+                <figure class="gallery__item gallery__item--16">
+                <%= link_to activities[15] do %>
+                <%= image_tag(activities[15].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[16].present? %>
+                <figure class="gallery__item gallery__item--17">
+                <%= link_to activities[16] do %>
+                <%= image_tag(activities[16].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
+                <% if activities[17].present? %>
+                <figure class="gallery__item gallery__item--18">
+                <%= link_to activities[17] do %>
+                <%= image_tag(activities[17].image_url, class: "gallery__img card-img explore") %>
+                <% end %>
+                </figure>
+                <% end %>
             <% end %>
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-            <%= link_to @activities[1] do %>
-              <%= image_tag(@activities[1].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-            <figure class="gallery__item gallery__item--3">
-            <%= link_to @activities[2] do %>
-            <%= image_tag(@activities[2].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-            <figure class="gallery__item gallery__item--4">
-            <%= link_to @activities[3] do %>
-            <%= image_tag(@activities[3].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-            <figure class="gallery__item gallery__item--5">
-            <%= link_to @activities[4] do %>
-            <%= image_tag(@activities[4].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-            <figure class="gallery__item gallery__item--6">
-            <%= link_to @activities[5] do %>
-            <%= image_tag(@activities[5].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-             <figure class="gallery__item gallery__item--7">
-            <%= link_to @activities[6] do %>
-            <%= image_tag(@activities[6].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-             <figure class="gallery__item gallery__item--8">
-            <%= link_to @activities[7] do %>
-            <%= image_tag(@activities[7].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-             <figure class="gallery__item gallery__item--9">
-            <%= link_to @activities[8] do %>
-            <%= image_tag(@activities[8].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-             <figure class="gallery__item gallery__item--10">
-            <%= link_to @activities[9] do %>
-            <%= image_tag(@activities[9].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-             <figure class="gallery__item gallery__item--11">
-            <%= link_to @activities[10] do %>
-            <%= image_tag(@activities[10].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-             <figure class="gallery__item gallery__item--12">
-            <%= link_to @activities[11] do %>
-            <%= image_tag(@activities[11].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-               <figure class="gallery__item gallery__item--13">
-            <%= link_to @activities[12] do %>
-            <%= image_tag(@activities[12].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-               <figure class="gallery__item gallery__item--14">
-            <%= link_to @activities[13] do %>
-            <%= image_tag(@activities[13].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-               <figure class="gallery__item gallery__item--15">
-            <%= link_to @activities[14] do %>
-            <%= image_tag(@activities[14].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-               <figure class="gallery__item gallery__item--16">
-            <%= link_to @activities[15] do %>
-            <%= image_tag(@activities[15].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-               <figure class="gallery__item gallery__item--17">
-            <%= link_to @activities[16] do %>
-            <%= image_tag(@activities[16].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
-               <figure class="gallery__item gallery__item--18">
-            <%= link_to @activities[17] do %>
-            <%= image_tag(@activities[17].image_url, class: "gallery__img card-img explore") %>
-            <% end %>
-            </figure>
           </div>
         </div>
   </div>
