@@ -8,32 +8,32 @@
 
          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
           <%= f.error_notification %>
-    <div class="text-center">
-      <%= render 'shared/avatar',
-        size: 'xl',
-        pointer: true,
-        data: {
-          "image-preview-target": "output",
-          action: "click->image-preview#uploadFile"
-        }
-      %>
-      <div class="mt-2 mb-3">
-        <button type="button" class="btn btn-outline-mybnb btn-sm" data-action="click->image-preview#uploadFile">
-          Upload a Photo
-        </button>
-      </div>
-    </div>
-    <%= f.input :photo,
-                label: false,
-                required: true,
-                as: :file,
-                input_html: {
-                  class: "d-none",
-                  data: {
-                    "image-preview-target": "input",
-                    action: "image-preview#readURL"
-                  }
-                } %>
+          <div class="text-center">
+            <%= render 'shared/avatar',
+              size: "bordered",
+              pointer: true,
+              data: {
+                "image-preview-target": "output",
+                action: "click->image-preview#uploadFile"
+              }
+            %>
+            <div class="mt-2 mb-3">
+              <button type="button" class="btn btn-outline-mybnb btn-sm" data-action="click->image-preview#uploadFile">
+                Upload a Photo
+              </button>
+            </div>
+          </div>
+          <%= f.input :photo,
+                      label: false,
+                      required: true,
+                      as: :file,
+                      input_html: {
+                        class: "d-none",
+                        data: {
+                          "image-preview-target": "input",
+                          action: "image-preview#readURL"
+                        }
+                      } %>
 
           <div class="form-inputs mb-5">
             <%= f.input :username,
