@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_15_141011) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_18_062259) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -89,6 +89,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_15_141011) do
     t.index ["user_id"], name: "index_children_on_user_id"
   end
 
+  create_table "hearts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "activity_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_hearts_on_activity_id"
+    t.index ["user_id"], name: "index_hearts_on_user_id"
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -138,6 +147,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_15_141011) do
   add_foreign_key "child_activities", "activities"
   add_foreign_key "child_activities", "children"
   add_foreign_key "children", "users"
+  add_foreign_key "hearts", "activities"
+  add_foreign_key "hearts", "users"
   add_foreign_key "reviews", "activities"
   add_foreign_key "reviews", "users"
   add_foreign_key "wishlists", "activities"

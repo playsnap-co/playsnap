@@ -12,13 +12,10 @@
     <div class="mt-2 d-flex justify-content-between activity-title">
       <span><%= @activity.title %></span>
       <div class="d-flex">
-        <span><%= button_to "", "#", class:"border-0 fa-regular fa-heart bg-transparent" %></span>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="1WMVtyEy"></script>
-        <div class="fa fa-share-alt" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
         <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
 
         <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
+        <%= render "heart_button", activity: @activity, heart: @heart %>
       </div>
     </div>
     <div class="mt-2">

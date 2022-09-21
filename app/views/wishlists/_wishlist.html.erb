@@ -1,8 +1,8 @@
-<div class="activity-card" id="activity-<%= wishlist.activity.id %>">
+<div class="wishlist-card" id="activity-<%= wishlist.activity.id %>">
   <div class="thumbnail">
     <%= image_tag wishlist.activity.image_url %>
   </div>
-  <div class="activity-card-info">
+  <div class="wishlist-card-info">
     <%= link_to "#{wishlist.activity.title}", activity_path(wishlist.activity.id) %>
   </div>
   <div class="icon">

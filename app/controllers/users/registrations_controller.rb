@@ -56,7 +56,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def configure_account_update_params
     # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(:account_update, keys: %i[username email])
+    devise_parameter_sanitizer.permit(
+      :account_update,
+      keys: %i[username email photo]
+    )
   end
 
   def update_resource(resource, params)

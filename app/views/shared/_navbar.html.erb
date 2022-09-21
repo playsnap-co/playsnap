@@ -1,4 +1,4 @@
-<div class="navbar fixed-top bg-white navbar-playsnap" aria-label="playsnap navbar">
+<div class="navbar sticky-top bg-white navbar-playsnap" aria-label="playsnap navbar">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
       <%= yield :title %>
@@ -27,7 +27,7 @@
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %>
           </li>
         <% else %>
           <li class="nav-item">

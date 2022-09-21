@@ -2,13 +2,19 @@
 // Run that command whenever you add a new controller or create them with
 // ./bin/rails generate stimulus controllerName
 
-import { application } from "./application"
+import { application } from "./application";
 
-import AutocompleteController from "./autocomplete_controller"
-application.register("autocomplete", AutocompleteController)
+import AutocompleteController from "./autocomplete_controller";
+application.register("autocomplete", AutocompleteController);
 
-import BookmarkButtonController from "./bookmark_button_controller"
-application.register("bookmark-button", BookmarkButtonController)
+import BookmarkButtonController from "./bookmark_button_controller";
+application.register("bookmark-button", BookmarkButtonController);
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import HelloController from "./hello_controller";
+application.register("hello", HelloController);
+
+import HeartButtonController from "./heart_button_controller";
+application.register("heart-button", HeartButtonController);
+
+import ImagePreviewController from "./image_preview_controller";
+application.register("image-preview", ImagePreviewController);

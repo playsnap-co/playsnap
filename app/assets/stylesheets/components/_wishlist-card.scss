@@ -1,4 +1,4 @@
-.activity-card {
+.wishlist-card {
   overflow: hidden;
   height: 100px;
   width: auto;
@@ -6,7 +6,7 @@
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin: 10px 18px;
+  margin: 12px 0px;
   font: $headers-font;
   justify-content: flex-start;
 
@@ -17,7 +17,7 @@
     margin-right: 10px;
   }
 
-  .activity-card-info {
+  .wishlist-card-info {
     font-size: 24px;
     font-weight: bold;
     width: auto;
@@ -31,8 +31,9 @@
 
   .icon {
     margin-left: auto;
-    padding: 5px;
+    padding: 7px;
     font-size: 28px;
+    opacity: 0.5;
   }
 
 }
