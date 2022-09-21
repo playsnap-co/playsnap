@@ -1,10 +1,9 @@
-<h1>Editing review</h1>
+<h1>Edit Review</h1>
 
-<%= render "form", review: @review %>
+<%= render "form", activity: @activity, review: @review %>
 
 <br>
 
 <div>
-  <%= link_to "Show this review", @review %> |
-  <%= link_to "Back to reviews", reviews_path %>
+  <%= link_to "Back to activity", activity_path(@activity) %>
 </div>
