@@ -28,16 +28,18 @@
         <div class="mt-3">
           <h4 class=>Reviews:</h4>
             <% if @activity.reviews.count > 0 %>
-              <% @activity.reviews.each do |review| %>
+              <% @activity.reviews.first(3).each do |review| %>
                 <p><strong><%= review.user.username.capitalize %></strong>: <%= review.content %> (Rating: <%= review.rating %>)</p>
-                  <%# if @activity.reviews.count > 3 %>
-                    <%# how to show more/all? %>
-                  <%# end %>
                 <% if review.user_id == current_user.id %>
                   <%= link_to "Edit", edit_activity_review_path(@activity, review.id)  %>
                   <%= link_to "Delete", review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Delete review?' } %>
                 <% end %>
               <% end %>
+              <div class="mt-3 text-center">
+                <% if @activity.reviews.count > 3 %>
+                  <%= link_to "See all reviews >", activity_reviews_path(@activity) %>
+                <% end %>
+              </div>
             <% else %>
               <p>No reviews yet.</p>
             <% end %>

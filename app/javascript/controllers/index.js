@@ -10,8 +10,8 @@ application.register("autocomplete", AutocompleteController)
 import BookmarkButtonController from "./bookmark_button_controller"
 application.register("bookmark-button", BookmarkButtonController)
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
-
 import HeartButtonController from "./heart_button_controller"
 application.register("heart-button", HeartButtonController)
+
+import StarRatingController from "./star_rating_controller"
+application.register("star-rating", StarRatingController)

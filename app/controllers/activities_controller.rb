@@ -26,7 +26,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
     @wishlist = Wishlist.find_by(activity: @activity, user: current_user)
     @heart = Heart.find_by(activity: @activity, user: current_user)
-    @reviews = Review.where(activity_id: @activity.id).order("created_at DESC")
+    @reviews = Review.where(activity: @activity, user: current_user).order("created_at DESC")
   end
 
   def edit

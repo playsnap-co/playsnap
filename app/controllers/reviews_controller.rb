@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_activity, only: %i[new create edit]
+  before_action :set_activity, only: %i[index new create edit]
   before_action :set_review, only: %i[show edit update destroy]
 
   # GET /reviews or /reviews.json
@@ -81,7 +81,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       format.html do
-        redirect_to activity_reviews_path(@activity), notice: "Review was successfully destroyed."
+        redirect_to activity_path(@activity), status: :see_other, notice: "Review was successfully destroyed."
       end
       format.json { head :no_content }
     end

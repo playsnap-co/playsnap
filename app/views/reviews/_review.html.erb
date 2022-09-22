@@ -1,2 +1,7 @@
-<div id="<%= dom_id review %>">
-</div>
+<% activity.reviews.each do |review| %>
+  <p><strong><%= review.user.username.capitalize %></strong>: <%= review.content %> (Rating: <%= review.rating %>)</p>
+  <% if review.user_id == current_user.id %>
+    <%= link_to "Edit", edit_activity_review_path(@activity, review.id)  %>
+    <%= link_to "Delete", review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Delete review?' } %>
+  <% end %>
+<% end %>
