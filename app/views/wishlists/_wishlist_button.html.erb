@@ -5,7 +5,7 @@
   >
   <%= button_to "",
       wishlists_path(activity_id: activity.id),
-      class:"border-0 bg-transparent fa-bookmark #{wishlist ? "fa-solid" : "fa-regular" }",
+      class:"icons border-0 bg-transparent fa-bookmark #{wishlist ? "fa-solid" : "fa-regular" }",
       data: {
         action:"click->bookmark-button#send",
         bookmark_button_target:"button"} %>

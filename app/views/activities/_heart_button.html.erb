@@ -4,7 +4,7 @@
   >
   <%= button_to "",
       hearts_path(activity_id: activity.id),
-      class:"border-0 bg-transparent fa-heart #{heart ? "fa-solid" : "fa-regular" }",
+      class:"icons border-0 bg-transparent fa-heart #{heart ? "fa-solid" : "fa-regular" }",
       data: {
         action:"click->heart-button#send",
         heart_button_target:"button"} %>

@@ -11,14 +11,8 @@
         <span class="badge rounded-pill bg-info text-dark"><%= @activity.category.name.titleize %></span>
         <div class="mt-4 d-flex justify-content-between activity-title">
           <h2><%= @activity.title %></h2>
-<<<<<<< HEAD
           <div class="d-flex">
             <%= render "share_button" %>
-=======
-          <div class="d-flex icons">
-            <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
-
->>>>>>> updated reviews css
             <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
             <%= render "heart_button", activity: @activity, heart: @heart %>
           </div>
