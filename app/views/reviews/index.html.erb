@@ -1,14 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<% content_for :title do %>
+  <h1>Reviews</h1>
+<% end %>
 
-<h1>Reviews</h1>
-
-<div id="reviews">
-  <% @reviews.each do |review| %>
-    <%= render review %>
-    <p>
-      <%= link_to "Show this review", review %>
-    </p>
-  <% end %>
+<div class="container page-container">
+  <div class="row">
+    <div class="col">
+      <div id="reviews">
+        <%= render "review", activity: @activity, review: @review %>
+      </div>
+      <div class="mt-5" text-center>
+        <%= link_to "< Back to activity", activity_path(@activity) %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New review", new_review_path if policy(Review).new? %>

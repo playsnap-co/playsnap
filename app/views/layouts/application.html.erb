@@ -17,5 +17,23 @@
 
     <%= yield %>
     <%= render "shared/footer" %>
+    <button id="turbo-confirm-button" type="button" style="display:none" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#turbo-confirm">
+      Launch demo modal
+    </button>
+    <div id="turbo-confirm" class="modal fade" tabindex="-1">
+      <form method="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirm</button>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
   </body>
 </html>

@@ -27,11 +27,13 @@
 
           <label for="category" class="form-label">to develop</label>
           <%= f.select(:category_id, Category.all.map { |c| [c.name.titleize, c.id] }.unshift(["Select a category",""]), {}, {class: "form-select form-select-lg mb-3"}) %>
-          <div class="form-actions text-center">
+          <div class="form-actions text-center mt-4 mb-5">
             <%= f.button "Search", class:"btn btn-primary btn-action"%>
           </div>
         <% end %>
-        <div class="card-container">
+        <hr>
+        <div class="card-container mt-3">
+          <h1>Playsnap covers these 5 areas of development:</h1>
           <div class="card-product">
             <%= image_tag("social.svg") %>
             <div class="card-product-infos">
