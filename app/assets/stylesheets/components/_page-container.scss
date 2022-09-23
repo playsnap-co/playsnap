@@ -5,15 +5,13 @@
 
 .icons {
   padding: 8px;
-  color: $dark-gray !important;
+  color: $dark-gray;
 
   .fa-share .fa-bookmark .fa-heart.fa-regular {
     color: $dark-gray;
   }
+}
 
-  .fa-heart {
-    & .fa-solid {
-      color: $red;
-    }
-  }
+.icons.fa-heart.fa-solid {
+  color: $red;
 }

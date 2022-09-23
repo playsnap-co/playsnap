@@ -29,15 +29,16 @@
           <%= @activity.description %>
         </div>
         <div class="mt-3">
-          <h4 class=>Reviews:</h4>
+          <h4><%= @activity.reviews.count %> Reviews:</h4>
             <% if @activity.reviews.count > 0 %>
               <% @activity.reviews.first(3).each do |review| %>
-                <p><strong><%= review.user.username.capitalize %></strong>: <%= review.content %> (Rating: <%= review.rating %>)</p>
+                <p><strong><%= review.user.username.capitalize %></strong>: <%= review.content %> (Rating: <%= review.rating %>)
                 <% if review.user_id == current_user.id %>
                   <%= link_to "Edit", edit_activity_review_path(@activity, review.id)  %>
                   <%= link_to "Delete", review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Delete review?' } %>
                   <hr>
                 <% end %>
+                </p>
               <% end %>
               <div class="mt-3 text-center">
                 <% if @activity.reviews.count > 3 %>
@@ -47,10 +48,12 @@
             <% else %>
               <p>No reviews yet.</p>
             <% end %>
+          <% unless @activity.reviews.pluck(:user_id).include? current_user.id%>
           <div class="mt-5">
             <h4>Share your thoughts with others!</h4>
             <%= render "reviews/form", activity: @activity, review: @activity.reviews.new, user: @activity.users %>
           </div>
+          <% end %>
         </div>
       </div>
     </div>
