@@ -2,16 +2,24 @@
 // import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
-import { Turbo } from "@hotwired/turbo-rails"
+import { Turbo } from "@hotwired/turbo-rails";
 
 Turbo.setConfirmMethod((message, element) => {
-  let dialog = document.getElementById("turbo-confirm")
-  dialog.querySelector("p").textContent = message
-  dialog.showModal()
+  const dialogButton = document.getElementById("turbo-confirm-button");
+  dialogButton.click();
+  const dialog = document.getElementById("turbo-confirm");
+  dialog.querySelector(".modal-title").textContent = message;
 
-  return new Promise((resolve, reject) => {
-    dialog.addEventListener("close", () => {
-      resolve(dialog.returnValue == "confirm")
-    }, { once: true })
-  })
-})
+  return new Promise((resolve) => {
+    dialog.querySelectorAll(".btn").forEach((button) => {
+      button.addEventListener(
+        "click",
+        (event) => {
+          const button = event.currentTarget;
+          resolve(button.textContent === "Confirm");
+        },
+        { once: true },
+      );
+    });
+  });
+});

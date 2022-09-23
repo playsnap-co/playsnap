@@ -11,14 +11,24 @@
         <span class="badge rounded-pill bg-info text-dark"><%= @activity.category.name.titleize %></span>
         <div class="mt-4 d-flex justify-content-between activity-title">
           <h2><%= @activity.title %></h2>
+<<<<<<< HEAD
           <div class="d-flex">
             <%= render "share_button" %>
+=======
+          <div class="d-flex icons">
+            <span><%= button_to "", "#", class:"border-0 fa fa-share-alt bg-transparent" %></span>
+
+>>>>>>> updated reviews css
             <%= render "wishlists/wishlist_button", activity: @activity, wishlist: @wishlist %>
             <%= render "heart_button", activity: @activity, heart: @heart %>
           </div>
         </div>
         <div class="mt-3">
-          <em>Average rating: <%= @activity.average_rating %></em>
+          <% if @activity.average_rating.to_f > 0 %>
+            <em>Average rating: <%= @activity.average_rating.ceil(1) %> / 5</em>
+          <% else %>
+            <em>Average rating: Nil</em>
+          <% end %>
         </div>
         <div class="mt-3">
           <h4>Description:</h4>
@@ -32,6 +42,7 @@
                 <% if review.user_id == current_user.id %>
                   <%= link_to "Edit", edit_activity_review_path(@activity, review.id)  %>
                   <%= link_to "Delete", review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Delete review?' } %>
+                  <hr>
                 <% end %>
               <% end %>
               <div class="mt-3 text-center">
@@ -42,7 +53,7 @@
             <% else %>
               <p>No reviews yet.</p>
             <% end %>
-          <div class="mt-3">
+          <div class="mt-5">
             <h4>Share your thoughts with others!</h4>
             <%= render "reviews/form", activity: @activity, review: @activity.reviews.new, user: @activity.users %>
           </div>

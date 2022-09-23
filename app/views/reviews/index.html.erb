@@ -2,14 +2,14 @@
   <h1>Reviews</h1>
 <% end %>
 
-<div class="container">
+<div class="container page-container">
   <div class="row">
     <div class="col">
       <div id="reviews">
         <%= render "review", activity: @activity, review: @review %>
       </div>
       <div class="mt-5" text-center>
-        <%= link_to "Back to activity", activity_path(@activity) %>
+        <%= link_to "< Back to activity", activity_path(@activity) %>
       </div>
     </div>
   </div>
