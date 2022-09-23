@@ -12,7 +12,11 @@
           <br>
           <%= render @child %>
           <div class="child-name">
-            <%= @child.name.capitalize %> <span class="material-symbols-outlined">edit</span>
+            <%= @child.name.capitalize %>
+            <span class="material-symbols-outlined">
+            <%= link_to edit_child_path do %>
+            edit</span>
+            <% end %>
           </div>
           <br>
 
@@ -23,13 +27,13 @@
             Gender: <%= @child.gender.capitalize %>
           </div>
 
-          <div class="child-details">
+          <%# <div class="child-details">
           <%= link_to activity_path do %>
-          <div class="profile-text">Completed Activities</div>
+          <%# <div class="profile-text">Completed Activities</div>
           <% end %>
 
         <%# with indicators carousel %>
-        <div id="completedActivities" class="carousel slide frame" data-bs-ride="carousel">
+        <%# <div id="completedActivities" class="carousel slide frame" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#completedActivities" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#completedActivities" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -58,7 +62,7 @@
         </div>
     </div>
   </div>
-<div>
+<div> %>
 
   <%# <% if policy(@child).edit? %>
     <%# <%= link_to "Edit this child", edit_child_path(@child) %>
