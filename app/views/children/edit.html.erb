@@ -8,7 +8,7 @@
       <div class="child-profile">
 
 
-      <%= simple_form_for(@child, url: new_child_path, data: { turbo: :false }) do |f| %>
+      <%= simple_form_for(@child, url: edit_child_path, data: { turbo: :false }) do |f| %>
           <%= f.error_notification %>
           <div class="text-center">
             <%= render 'shared/avatar',

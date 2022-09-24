@@ -7,7 +7,7 @@
     <div class="col-xs-12.col-sm-3.col-sm-offset">
       <div class="child-profile">
 
-      <%= simple_form_for(@child, url: edit_child_path, data: { turbo: :false }) do |f| %>
+      <%= simple_form_for(@child) do |f| %>
           <%= f.error_notification %>
           <div class="text-center">
             <%= render 'shared/avatar',
