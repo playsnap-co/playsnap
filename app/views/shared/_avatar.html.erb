@@ -1,5 +1,5 @@
-<% if user_signed_in? && current_user.photo.key %>
-  <%= cl_image_tag current_user.photo.key,
+<% if user_signed_in? && human.photo.key %>
+  <%= cl_image_tag human.photo.key,
         class: "avatar-#{size || 'md'} #{ defined? classes ? classes : ''}",
         style: pointer ? 'cursor:pointer;' : '',
         data: data || {},

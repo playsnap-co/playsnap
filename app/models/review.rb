@@ -7,9 +7,9 @@ class Review < ApplicationRecord
 
   def review_time
     if updated_at > created_at
-      "Edited #{updated_at.strftime("%d/%m/%Y at %I:%M%p")}"
+      "Edited #{updated_at.localtime.strftime("%d/%m/%Y at %I:%M%p")}"
     else
-      "Written #{created_at.strftime("%d/%m/%Y at %I:%M%p")}"
+      "Written #{created_at.localtime.strftime("%d/%m/%Y at %I:%M%p")}"
     end
   end
 end

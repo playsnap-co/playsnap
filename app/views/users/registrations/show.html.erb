@@ -1,5 +1,5 @@
 <% content_for :title do %>
-  <h1>Parent profile</h1>
+  <h1>My Profile</h1>
 <% end %>
 
 <div class="container page-container">
@@ -9,6 +9,7 @@
         <%= f.error_notification %>
         <div class="text-center">
           <%= render 'shared/avatar',
+            human: @resource,
             size: "bordered",
             pointer: true,
             data: {
