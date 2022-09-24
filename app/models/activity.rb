@@ -7,6 +7,8 @@ class Activity < ApplicationRecord
   has_many :users, through: :wishlists
 
   def average_rating
-    reviews.average(:rating) || "No ratings yet"
+    rating = reviews.average(:rating)
+    return "No ratings yet" if rating.nil?
+    rating.ceil(1)
   end
 end
