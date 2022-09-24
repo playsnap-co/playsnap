@@ -881,7 +881,52 @@ users = [
   "Why ABC",
   "Annita",
   "Easy Peasy",
-  "Dan niu"
+  "Dan niu",
+  "Ashlie Ketchum",
+  "Liana Waters",
+  "John Doe",
+  "TurboSlayer",
+  "CrypticHatter",
+  "CrashTV",
+  "Blue Defender",
+  "Iron Merc",
+  "Steel Titan",
+  "Stealthed Defender",
+  "deluxe_vegan",
+  "music.czar",
+  "readingpro",
+  "bandalls",
+  "wattlexp",
+  "sweetiele",
+  "hyperyaufarer",
+  "editussion",
+  "experthead",
+  "flames bria",
+  "heroanhart",
+  "liveltekah",
+  "linguss",
+  "interestec",
+  "fuzzys puffy",
+  "monsterup",
+  "milka1baby",
+  "loves 444 boost",
+  "edgymnerch",
+  "ort spoon",
+  "oranolio",
+  "one mama",
+  "draven fact",
+  "really chel",
+  "reakefit",
+  "popularkiya",
+  "breacche",
+  "blikimore",
+  "stonewellforever",
+  "simmson",
+  "brighthulk",
+  "bootecia",
+  "spuffyffet",
+  "rozalthiric",
+  "bookman"
 ]
 
 template_review = [
@@ -929,14 +974,20 @@ users.each do |user|
 
   review = template_review.sample
 
-  Review.create(
-    {
-      content: review[:content],
-      rating: review[:rating],
-      activity: feed_lion,
-      user: commenter
-    }
-  )
+  Activity.all.each do |activiti|
+    random_num = (1..100).to_a.sample
+    time = Time.now - random_num.day - random_num.hour - random_num.minute
+    Review.create(
+      {
+        content: review[:content],
+        rating: review[:rating],
+        activity: activiti,
+        created_at: time,
+        updated_at: time,
+        user: commenter
+      }
+    )
+  end
 end
 
 puts "#{Review.count} Reviews created"
