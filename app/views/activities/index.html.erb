@@ -13,7 +13,7 @@
       <% end %>
       <h2 class="mb-3"><%= @noresults %></h2>
       <div class="gallery">
-        <% activity_gallery = @activities.each_slice(18).to_a%>
+        <% activity_gallery = @activities.each_slice(24).to_a%>
         <% activity_gallery.each do |activities|%>
           <% if activities[0].present? %>
             <figure class="gallery__item gallery__item--1">
@@ -164,25 +164,26 @@
           <% end %>
            <% if activities[21].present? %>
             <figure class="gallery__item gallery__item--22">
-            <%= link_to activities[20] do %>
-            <%= image_tag(activities[20].image_url, class: "gallery__img card-img explore") %>
+            <%= link_to activities[21] do %>
+            <%= image_tag(activities[21].image_url, class: "gallery__img card-img explore") %>
             <% end %>
             </figure>
           <% end %>
            <% if activities[22].present? %>
             <figure class="gallery__item gallery__item--23">
-            <%= link_to activities[20] do %>
-            <%= image_tag(activities[20].image_url, class: "gallery__img card-img explore") %>
+            <%= link_to activities[22] do %>
+            <%= image_tag(activities[22].image_url, class: "gallery__img card-img explore") %>
             <% end %>
             </figure>
           <% end %>
            <% if activities[23].present? %>
             <figure class="gallery__item gallery__item--24">
-            <%= link_to activities[20] do %>
-            <%= image_tag(activities[20].image_url, class: "gallery__img card-img explore") %>
+            <%= link_to activities[23] do %>
+            <%= image_tag(activities[23].image_url, class: "gallery__img card-img explore") %>
             <% end %>
             </figure>
           <% end %>
+        <% end %>
       </div>
     <p class= "end"><em>Refresh for more activities!</em></p>
     </div>
