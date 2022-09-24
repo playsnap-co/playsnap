@@ -5,20 +5,17 @@
 
 .icons {
   padding: 8px;
-  color: $dark-gray;
-
-  .fa-share .fa-bookmark .fa-heart.fa-regular {
-    color: $dark-gray;
-  }
+  color: $purple;
+  opacity: 0.7;
 }
 
 .icons.fa-heart.fa-solid {
   color: $red;
 }
 
-.icons.fa-bookmark.fa-solid {
-  color: $orange;
-}
+// .icons.fa-bookmark {
+//   color: $purple;
+// }
 
 .fa,
 .fa-solid {

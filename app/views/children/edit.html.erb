@@ -1,10 +1,12 @@
 <% content_for :title do %>
-  <h1>Editing child</h1>
+  <h1>Editing Child's Profile</h1>
 <% end %>
+
 <div class="container" data-controller="image-preview" >
   <div class="row">
     <div class="col-xs-12.col-sm-3.col-sm-offset">
       <div class="child-profile">
+
 
       <%= simple_form_for(@child, url: new_child_path, data: { turbo: :false }) do |f| %>
           <%= f.error_notification %>
