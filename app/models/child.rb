@@ -4,4 +4,6 @@ class Child < ApplicationRecord
   has_one_attached :photo
 
   validates :gender, :age, presence: true
+
+  has_one_attached :photo
 end

@@ -6,11 +6,11 @@
   <div class="row">
     <div class="col-xs-12.col-sm-3.col-sm-offset">
       <div class="child-profile">
-
       <%= simple_form_for(@child) do |f| %>
           <%= f.error_notification %>
           <div class="text-center">
             <%= render 'shared/avatar',
+              human: @child,
               size: "bordered",
               pointer: true,
               data: {
@@ -49,7 +49,6 @@
           <div class="form-actions text-center">
             <%= f.button :submit, "Save", class:"btn btn-primary btn-action" %>
           </div>
-
         <% end %>
       </div>
     </div>

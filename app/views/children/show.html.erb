@@ -1,5 +1,5 @@
 <% content_for :title do %>
-  <h1>Profile</h1>
+  <h1><%= @child.name.capitalize %>'s Profile</h1>
 <% end %>
 
 <div class="container page-container">
@@ -7,10 +7,11 @@
     <div class="col-xs-12.col-sm-3.col-sm-offset">
       <div class="child-profile text-center">
 
-          <%= simple_form_for(@child, url: child_path, data: { turbo: :false }) do |f| %>
+        <%= simple_form_for(@child, url: child_path, data: { turbo: :false }) do |f| %>
           <%= f.error_notification %>
           <div class="text-center">
             <%= render 'shared/avatar',
+              human: @child,
               size: "bordered",
               pointer: true,
               data: {
