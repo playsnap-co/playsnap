@@ -7,9 +7,31 @@
     <div class="col-xs-12.col-sm-3.col-sm-offset">
       <div class="child-profile text-center">
 
-           <%= image_tag("child_avatar.png", style: "width: 100px") %>
-          <br>
-          <br>
+          <%= simple_form_for(@child, url: child_path, data: { turbo: :false }) do |f| %>
+          <%= f.error_notification %>
+          <div class="text-center">
+            <%= render 'shared/avatar',
+              size: "bordered",
+              pointer: true,
+              data: {
+                "image-preview-target": "output",
+                action: "click->image-preview#uploadFile"
+              }
+            %>
+
+          <%= f.input :photo,
+                      label: false,
+                      required: true,
+                      as: :file,
+                      input_html: {
+                        class: "d-none",
+                        data: {
+                          "image-preview-target": "input",
+                          action: "image-preview#readURL"
+                        }
+                      } %>
+        <% end %>
+
           <%= render @child %>
           <div class="child-name">
             <%= @child.name.capitalize %>
@@ -21,7 +43,7 @@
           <br>
 
           <div class="child-details">
-            Age: <%= @child.age %> mths
+            Age: <%= @child.age %>
           </div>
           <div class="child-details">
             Gender: <%= @child.gender.capitalize %>
