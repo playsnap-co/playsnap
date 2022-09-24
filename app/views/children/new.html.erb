@@ -35,28 +35,21 @@
                           action: "image-preview#readURL"
                         }
                       } %>
-          <% end %>
 
-        <label for="name" class="form-label"></label>
-        <%= simple_form_for @child, method: :post do |f| %>
-          <div class="form-inputs mb-5">
-              <%= f.input :name,
-                          required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "name" },
-                          placeholder: "Enter name" %>
+          <%= f.input :name,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "name" },
+                      placeholder: "Enter name" %>
 
-              <label for="age" class="form-label">Age</label>
-              <%= f.select(:age, [["Select age",""],"0 - 12 mths", "13 - 24mths", "25 - 36 mths"], {}, {required: true, class: "form-select form-select"}) %>
+          <%= f.input :age, label:"Age Range", as: :select, collection: [["Select age range",""],["0 - 12 mths",1], ["13 - 24mths",2], ["25 - 36 mths",3]], prompt: "Select age range", required: true %>
+          <%= f.input :gender, as: :select, collection: ['boy', 'girl'], prompt: "Select gender", required: true %>
 
-            <label for="gender" class="form-label"></label>
-            <%= f.input :gender, as: :select, collection: ['boy', 'girl'], required: true %>
-
-            <div class="form-actions text-center">
-              <%= f.button :submit, "Save", class:"btn btn-primary btn-action" %>
-            </div>
-            <% end %>
+          <div class="form-actions text-center">
+            <%= f.button :submit, "Save", class:"btn btn-primary btn-action" %>
           </div>
+
+        <% end %>
       </div>
     </div>
   </div>
