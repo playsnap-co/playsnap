@@ -94,6 +94,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_062259) do
     t.bigint "activity_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["activity_id", "user_id"], name: "index_hearts_on_activity_id_and_user_id", unique: true
     t.index ["activity_id"], name: "index_hearts_on_activity_id"
     t.index ["user_id"], name: "index_hearts_on_user_id"
   end
