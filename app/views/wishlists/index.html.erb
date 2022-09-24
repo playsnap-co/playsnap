@@ -12,7 +12,7 @@
           <% @wishlists.each do |wishlist| %>
             <%= render "wishlist", wishlist: wishlist %>
           <% end %>
-          <h3 class="mt-3 text-center">
+          <h3 class="mt-4 text-center">
           <%= link_to "Add Activities", activities_path, class:"btn btn-primary btn-action" %>
           </h3>
         <% else %>
@@ -20,7 +20,7 @@
           <h2 class="lh-lg">Simply tap on the bookmark icon&nbsp;
             <i class="fa-regular fa-bookmark"></i>&nbsp;
             when browsing activities to fill this list up!</h2>
-          <h3 class="mt-3 text-center">
+          <h3 class="mt-4 text-center">
             <%= link_to "Get Started", activities_path, class:"btn btn-primary btn-action" %>
           </h3>
         <% end %>
