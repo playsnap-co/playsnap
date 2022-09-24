@@ -1,0 +1,12 @@
+[data-star-rating] .gl-star-rating--stars[aria-label] {
+  &::before {
+    background: none;
+  }
+
+  &::after {
+    background: none;
+    border-radius: none;
+    color: $purple;
+    font-weight: bold;
+  }
+}
