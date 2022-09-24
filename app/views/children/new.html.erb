@@ -2,7 +2,7 @@
   <h1>Add Child Profile</h1>
 <% end %>
 
-<div class="container" data-controller="image-preview" >
+<div class="container page-container" data-controller="image-preview" >
   <div class="row">
     <div class="col-xs-12.col-sm-3.col-sm-offset">
       <div class="child-profile">
@@ -19,8 +19,8 @@
               }
             %>
             <div class="mt-2 mb-3">
-              <button type="button" class="btn btn-outline-mybnb btn-sm" data-action="click->image-preview#uploadFile">
-                Upload a Photo
+              <button type="button" class="btn btn-outline-secondary btn-sm" data-action="click->image-preview#uploadFile">
+                Upload Photo
               </button>
             </div>
           </div>
@@ -52,7 +52,7 @@
             <label for="gender" class="form-label"></label>
             <%= f.input :gender, as: :select, collection: ['boy', 'girl'], required: true %>
 
-            <div class="form-actions text-center">
+            <div class="form-actions text-center mt-5">
               <%= f.button :submit, "Save", class:"btn btn-primary btn-action" %>
             </div>
             <% end %>
