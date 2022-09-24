@@ -42,7 +42,7 @@
                       input_html: { autocomplete: "name" },
                       placeholder: "Enter name" %>
 
-          <%= f.input :age, label:"Age Range", as: :select, collection: [["Select age range",""],["0 - 12 mths",1], ["13 - 24mths",2], ["25 - 36 mths",3]], prompt: "Select age range", required: true %>
+          <%= f.input :age, label:"Age Range", as: :select, collection: [["0 - 12 mths", "0 - 12 mths"], ["13 - 24 mths", "13 - 24 mths"], ["25 - 36 mths", "25 - 36 mths"]], prompt: "Select age range", required: true %>
           <%= f.input :gender, as: :select, collection: ['boy', 'girl'], prompt: "Select gender", required: true %>
 
           <div class="form-actions text-center">

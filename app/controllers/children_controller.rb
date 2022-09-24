@@ -28,8 +28,6 @@ class ChildrenController < ApplicationController
     @child = Child.new(child_params)
     @child.user = current_user
     # authorize @child
-    puts child_params
-    puts @child
 
     respond_to do |format|
       if @child.save!
