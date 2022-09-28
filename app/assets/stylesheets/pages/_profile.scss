@@ -1,13 +1,23 @@
-.profile {
-  padding: 20px 40px 20px 40px;
-    a {
+// .profile {
+//   padding: 20px 40px 20px 40px;
+//   a {
+//     text-decoration: none;
+//     color: black;
+//   }
+// }
+
+// .parent_avatar {
+//   border-radius: 50%;
+// }
+
+.profile-container {
+  a {
     text-decoration: none;
-    color: black;
-    }
   }
 
-.parent_avatar {
-  border-radius: 50%;
+  h2 {
+    margin: 0px;
+  }
 }
 
 .profile-card {

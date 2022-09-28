@@ -4,7 +4,7 @@
 
 <div class="container page-container">
   <div class="row">
-    <div class="col-xs-12.col-sm-3.col-sm-offset">
+    <div class="col-xs-12.col-sm-3.col-sm-offset profile-container">
       <%= simple_form_for(@resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
         <%= f.error_notification %>
         <div class="text-center">
@@ -40,17 +40,22 @@
           </div>
         <% end %>
 
+        <h2 class="mt-5 mb-3">
+          <%= @resource.children.count > 1 ? "My Little Ones" : "My Little One" %>
+        </h2>
+
         <% @resource.children.each do |child| %>
           <%= link_to child_path(child) do %>
           <div class="profile-card mb-3">
             <div class ="yellow-box"></div>
-            <div class="profile-text"><%= "#{child.name.capitalize}'s profile" %></div>
+            <div class="profile-text">
+              <h2><%= "#{child.name.capitalize}'s profile" %></div></h2>
           </div>
           <% end %>
         <% end %>
 
         <%= simple_form_for(@resource.children.new, url: new_child_path, data: { turbo: :false }, method: :get) do |f| %>
-          <div class="form-actions text-center">
+          <div class="form-actions text-center mt-5">
             <%= f.button :submit, "Add Child", class:"btn-primary btn-action"%>
           </div>
         <% end %>

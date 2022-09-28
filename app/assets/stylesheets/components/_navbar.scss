@@ -16,12 +16,11 @@
 
   .navbar-collapse {
     flex-grow: 0;
-    // background: $teal;
   }
 
-  .navbar-brand img {
-    width: 40px;
-  }
+  // .navbar-brand img {
+  //   width: 40px;
+  // }
 
   .nav-item {
     text-align: left;
@@ -41,5 +40,20 @@
   .fa #text {
     font-family: $body-font;
     font-weight: var(--fa-style, 400);
+  }
+
+  .title-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .title-group.fa-arrow-left {
+    float: left;
+  }
+
+  .title-group > h1 {
+    float: right;
+    margin: 0px;
+    padding-top: 3px;
   }
 }

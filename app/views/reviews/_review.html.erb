@@ -2,7 +2,6 @@
   <% activity.reviews.each do |review| %>
     <h3><strong><%= review.user.username.capitalize %></strong>: <%= review.content %></h3>
     <p>Rating: <%= review.rating %>/5</p>
-    <%# <h3>Rating: render_stars(review.rating)</h3> %>
     <% if review.user_id == current_user.id %>
       <%= link_to "Edit", edit_activity_review_path(@activity, review.id)  %> |
       <%= link_to "Delete", review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Delete review?' } %>

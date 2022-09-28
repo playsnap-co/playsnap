@@ -1,27 +1,38 @@
 .child-profile {
   padding: 20px 40px 20px 40px;
 
-    .child-name {
-      font-size: 24px;
-      text-decoration: none;
-    }
-
-    .child-details {
-      font-size: 18px;
-      padding: 10px;
-      text-align: left;
-    }
-
-    .form-label {
-      font-size: 18px;
-    }
-
-    .frame img {
-        height: 200px;
-        width: auto;
-        object-fit: cover;
-      }
-    .a {
-      text-decoration: none;
-    }
+  .child-name {
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  h2 {
+    margin: 0px;
+    padding-top: 2px;
+  }
+
+  .child-details {
+    font-size: 18px;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .form-label {
+    font-size: 18px;
+  }
+
+  .frame img {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .material-symbols-outlined > a {
+    text-decoration: none;
+    line-height: 0;
+    padding-left: 6px;
+  }
+}
