@@ -16,7 +16,7 @@ Activity.destroy_all
 Category.destroy_all
 
 puts "Creating Users"
-%w[goh kyla yaamani jielin].each do |user|
+%w[goh kyla yaamanni jielin].each do |user|
   parent_profile =
     User.create(
       username: user,
@@ -27,7 +27,7 @@ puts "Creating Users"
 
   puts "Creating Child"
   Child.create(
-    name: %w[danielle whysee easun annie].sample,
+    name: %w[daniele whysee easun anndie].sample,
     age: (0..36).to_a.sample,
     gender: %w[male female].sample,
     user: parent_profile
@@ -827,7 +827,7 @@ puts "Created gross motor activities!"
 puts "Creating review for feed the lion"
 goh = User.find_by(username: "goh")
 kyla = User.find_by(username: "kyla")
-yaam = User.find_by(username: "yaamani")
+yaam = User.find_by(username: "yaamanni")
 jie = User.find_by(username: "jielin")
 
 Review.create(
@@ -867,9 +867,9 @@ users = [
   "Sammie Leong",
   "Joey Tan",
   "Want Wanting Wanted",
-  "Muna Hersi",
+  "Munna Hersi",
   "Johnathan 2",
-  "Kavi Kuppusamy",
+  "Kavitaz",
   "Vannessa",
   "Leon Chau Wei",
   "Jenn Lopez",
@@ -883,7 +883,7 @@ users = [
   "Easy Peasy",
   "Dan niu",
   "Ashlie Ketchum",
-  "Liana Waters",
+  "Lianawat",
   "John Doe",
   "TurboSlayer",
   "CrypticHatter",
@@ -909,7 +909,7 @@ users = [
   "fuzzys puffy",
   "monsterup",
   "milka1baby",
-  "loves 444 boost",
+  "loves00",
   "edgymnerch",
   "ort spoon",
   "oranolio",
@@ -934,28 +934,30 @@ template_review = [
     content: [
       "This is a very good activity leh! I will want to try it again next time.",
       "I will definitely like and share this",
-      "Thank you playsnap"
+      "Playsnap is the best app ever!",
+      "Baby stopped crying instantly!! No more fussing! <3"
     ].sample,
     rating: 5
   },
   {
     content: [
-      "I think this idea is not bad, recommend to other parents to check it out",
+      "This is not bad, will recommend to other parents to check it out",
       "Thanks playsnap, it helps!",
-      "This is a fun activity, haha"
+      "This is a fun activity, haha",
+      "My LO can play independently, so happy!"
     ].sample,
     rating: 4
   },
   {
     content: [
       "Still ok ok, thanks playsnap for the recommendation. Will explore other activities",
-      "Ok can.. lalala.."
+      "So so, needed to adapt to make it more engaging.."
     ].sample,
     rating: 3
   },
   {
     content: [
-      "Not good, no time to prepare the materials",
+      "Not very fun, kiddo gets bored after awhile..",
       "Not so clear about the activity description...",
       "It will be much better if there is a short video clip of how we can do it"
     ].sample,

@@ -1,5 +1,8 @@
 <% content_for :title do %>
-  <h1>Edit <%= @child.name.capitalize %>'s Profile</h1>
+  <div class="title-group">
+    <%= render "activities/back_button" %>
+    <h1>Edit <%= @child.name.capitalize %>'s Profile</h1>
+  </div>
 <% end %>
 
 <div class="container" data-controller="image-preview" >

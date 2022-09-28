@@ -1,5 +1,8 @@
 <% content_for :title do %>
-  <h1><%= @child.name.capitalize %>'s Profile</h1>
+  <div class="title-group">
+    <%= render "activities/back_button" %>
+    <h1><%= @child.name.capitalize %>'s Profile</h1>
+  </div>
 <% end %>
 
 <div class="container page-container">
@@ -35,7 +38,7 @@
 
           <%= render @child %>
           <div class="child-name">
-            <%= @child.name.capitalize %>
+            <h2><%= @child.name.capitalize %></h2>
             <span class="material-symbols-outlined">
             <%= link_to edit_child_path do %>
             edit</span>
@@ -44,7 +47,7 @@
           <br>
 
           <div class="child-details">
-            Age: <%= @child.age %>
+            Age: <%= @child.age %> months
           </div>
           <div class="child-details">
             Gender: <%= @child.gender.capitalize %>

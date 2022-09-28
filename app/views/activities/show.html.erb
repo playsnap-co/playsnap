@@ -1,5 +1,8 @@
 <% content_for :title do %>
-  <h1>Explore</h1>
+  <div class="title-group">
+    <%= render "back_button" %>
+    <h1>Explore</h1>
+  </div>
 <% end %>
 
 <div class="container">
@@ -28,14 +31,15 @@
           <h4><%= pluralize @activity.reviews.count, "Review" %></h4>
             <% if @activity.reviews.count > 0 %>
               <% @reviews.first(3).each do |review| %>
-                <p><strong><%= review.user.username.capitalize %></strong>: <%= review.content %> (Rating: <%= review.rating %>)</p>
-                <p><small class="timing"><%= review.review_time %></small>
-                <% if review.user_id == current_user.id %>
-                  <%= link_to "", edit_activity_review_path(@activity, review.id), class:"icons fa-solid fa-pencil"  %>
-                  <%= link_to "", review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Delete review?' }, class:"icons fa fa-trash" %>
-                  <hr>
-                <% end %>
-                </p>
+                <span class="mt-4">
+                  <p><strong><%= review.user.username.capitalize %></strong>: <%= review.content %> (Rating: <%= review.rating %>)</p>
+                  <p><small class="timing"><%= review.review_time %></small>
+                  <% if review.user_id == current_user.id %>
+                    <%= link_to "", edit_activity_review_path(@activity, review.id), class:"icons fa-solid fa-pencil"  %>
+                    <%= link_to "", review_path(review), data: { turbo_method: :delete, turbo_confirm: 'Delete review?' }, class:"icons fa fa-trash" %>
+                  <% end %>
+                  </p>
+                </span>
               <% end %>
               <div class="mt-3 text-center">
                 <% if @activity.reviews.count > 3 %>

@@ -1,6 +1,6 @@
 .activity {
   &-image {
-    height: 250px;
+    height: 280px;
     object-fit: cover;
   }
 
@@ -31,14 +31,13 @@
 }
 .autocomplete-items div {
   cursor: pointer;
-  background-color: #DAECF0;
+  background-color: #daecf0;
   color: #717b83;
   // border-bottom: 1px solid #D4D4D4;
   border-left: 1px solid #ced4da;
   border-right: 1px solid #ced4da;
 }
 .autocomplete-items {
-
   position: absolute;
   z-index: 99;
   /*position the autocomplete items to be the same width as the container:*/
@@ -53,7 +52,7 @@
 }
 
 .dropdown-item {
-  background-color: #DAECF0;
+  background-color: #daecf0;
   color: #717b83;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
