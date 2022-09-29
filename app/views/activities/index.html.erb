@@ -12,7 +12,7 @@
         <span class="badge rounded-pill bg-info text-dark"><%= @age_group %></span>
       <% end %>
       <h2 class="mb-3"><%= @noresults %></h2>
-      <div class="gallery">
+      <div class="gallery mb-3">
         <% activity_gallery = @activities.each_slice(24).to_a%>
         <% activity_gallery.each do |activities|%>
           <% if activities[0].present? %>
@@ -185,7 +185,6 @@
           <% end %>
         <% end %>
       </div>
-    <p class= "end mt-4"><em>Refresh for more activities!</em></p>
     </div>
   </div>
 </div>

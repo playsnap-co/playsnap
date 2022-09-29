@@ -9,7 +9,7 @@
                       label: "Rate this activity",
                       input_html: { data: { controller: "star-rating", action: "click->form-submit#submit"}, class:"stars" }  %>
           <%= f.hidden_field :user_id, value: current_user.id %>
-          <div class="text-center mt-5">
+          <div class="text-center mt-4">
             <%= f.submit "Submit", class:"btn btn-primary btn-action text-center" %>
           </div>
         <% end %>

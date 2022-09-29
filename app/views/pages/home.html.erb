@@ -27,6 +27,7 @@
 
           <label for="category" class="form-label">to develop</label>
           <%= f.select(:category_id, Category.all.map { |c| [c.name.titleize, c.id] }.unshift(["Select a category",""]), {}, {class: "form-select form-select-lg mb-3"}) %>
+          <p class="footnote"><em>*See below to find out more!</em></p>
           <div class="form-actions text-center mt-4 mb-5">
             <%= f.button "Search", class:"btn btn-primary btn-action"%>
           </div>
