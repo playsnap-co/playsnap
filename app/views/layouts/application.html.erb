@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta property="og:url" content="https://playsnap.herokuapp.com/activities/<%= @activity %>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<%= @activity.title %>" />
+    <meta property="og:description" content="<%= @activity.description %>" />
+    <meta property="og:image" content="<%= @activity.image_url %>" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
