@@ -1,4 +1,16 @@
-<%= <div id="fb-root"></div>
+<%# <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="1WMVtyEy"></script>
 <div class="fa fa-share-alt" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div> %>
-<span><%= button_to "", "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse", class:" icons border-0 fa fa-share-alt bg-transparent" %></span>
+<%# <span>button_to "", "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse", class:" icons border-0 fa fa-share-alt bg-transparent"</span> %>
+
+<script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    display: 'popup',
+    method: 'share',
+    href: 'https://playsnap.herokuapp.com/activities/<%= @activity %>',
+  }, function(response){});
+}
+</script>
+
+<%= button_to "", "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse", class:" icons border-0 fa fa-share-alt bg-transparent", id:"shareBtn" %>
