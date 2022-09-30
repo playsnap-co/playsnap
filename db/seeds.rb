@@ -28,7 +28,7 @@ puts "Creating Users"
   puts "Creating Child"
   Child.create(
     name: %w[daniele whysee easun anndie].sample,
-    age: (0..36).to_a.sample,
+    age: %w["0 - 12 mths" "13 - 24 mths" "25 - 36 mths"].sample,
     gender: %w[male female].sample,
     user: parent_profile
   )
