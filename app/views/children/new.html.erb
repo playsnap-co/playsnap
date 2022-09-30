@@ -49,7 +49,7 @@
           <%= f.input :age, label:"Age Range", as: :select, collection: [["0 - 12 mths", "0 - 12 mths"], ["13 - 24 mths", "13 - 24 mths"], ["25 - 36 mths", "25 - 36 mths"]], prompt: "Select age range", required: true %>
           <%= f.input :gender, as: :select, collection: ['boy', 'girl'], prompt: "Select gender", required: true %>
 
-          <div class="form-actions text-center">
+          <div class="form-actions text-center mt-4">
             <%= f.button :submit, "Save", class:"btn btn-primary btn-action" %>
           </div>
         <% end %>

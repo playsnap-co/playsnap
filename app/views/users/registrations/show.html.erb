@@ -49,13 +49,13 @@
           <div class="profile-card mb-3">
             <div class ="yellow-box"></div>
             <div class="profile-text">
-              <h2><%= "#{child.name.capitalize}'s profile" %></div></h2>
+              <h2><%= child.name.capitalize %></div></h2>
           </div>
           <% end %>
         <% end %>
 
         <%= simple_form_for(@resource.children.new, url: new_child_path, data: { turbo: :false }, method: :get) do |f| %>
-          <div class="form-actions text-center mt-5">
+          <div class="form-actions text-center mt-4">
             <%= f.button :submit, "Add Child", class:"btn-primary btn-action"%>
           </div>
         <% end %>
